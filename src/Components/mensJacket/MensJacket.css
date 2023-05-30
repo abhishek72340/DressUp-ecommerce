@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mens-jacket-product{
+    display: flex;
+}
+#jacket-wallpaper{
+    width: 40%;
+    height: 100%;
+}
+#mens-jacket-heading{
+    font-size: 2rem;
+    font-size: 2.5rem;
+    margin:3rem 9px;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#dressup-shop-heading{
+    font-size: 1rem;
+}
+#mens-jacket-product-iterate{
+    display: flex;
+    gap:1px;
+    margin-top: 8rem;
+    margin-left: -16rem;
+}
+#jacket-type{
+    font-weight: lighter ;
+}
+#jacket-title{
+    height: 5rem;
+    width: 8rem;
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: bold;
+    display: flex;
+}
+#jacket-price{
+    font-weight: lighter ;
+    margin-top: 1rem;
+
+}
+#jacket-addcart-button{
+    margin-top: 10px;
+    display: flex;
+    gap:2rem;
+}
+.jacket-wishlist{
+    cursor: pointer;
+  opacity: 0.8;
+  margin: 5px 0;
+  font-size: 1.3rem;
+ 
+}
+#jacket-out-stock{
+    color: red;
+    font-size: 1.3rem;
+    margin-top: 10px;
+font-weight: lighter;
+}
+#out-of-stock-button{
+    width: 11rem;
+    height: 1.5rem;
+    background-color:whitesmoke;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    margin-left: 3rem;
+    position: absolute;
+ 
+}
+
+/* Design for mobile */
+@media (max-width:480px){
+    #mens-jacket-product-iterate{
+        display: flex;
+        flex-direction: column;
+        margin-top: -5rem;
+        margin-left: 2rem;
+      
+      
+    }
+    #mens-jacket-product{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #jacket-wallpaper{
+        width: 90%;
+        margin-left: 2.5rem;
+    }
+    #mens-jacket-heading{
+        font-size: 2rem;
+        font-size: 2.5rem;
+        margin:3rem 9px;
+        font-family: 'Hammersmith One', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    #dressup-shop-heading{
+        font-size: 1.2rem;
+    }
+   
+   
+    #jacket-title{
+        height: 0;
+        width: 20rem;
+        font-size: 12px;
+        margin-top: 10px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    #jacket-type{
+        font-weight: lighter ;
+    }
+
+    #jacket-price{
+        font-weight: bold ;
+        margin-top: 7rem;
+        font-size: 1.5rem;
+    
+    }
+    #jacket-addcart-button{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+    }
+    #jacket-wishlist{
+        cursor: pointer;
+      opacity: 1;
+      margin: -17px 0;
+      font-size: 1.5rem;
+     
+    }
+    #jacket-out-stock{
+        color: red;
+        font-size: 1.3rem;
+        margin-top: 8rem;
+           font-weight: lighter;
+    }
+    #out-of-stock-button{
+              margin-top: -12rem;
+        margin-left: 13rem;     
+    }
+}
+
+/* Design for Tablet */
+
+@media (max-width:1024px){
+    #mens-jacket-product-iterate{
+        display: flex;
+        flex-direction: column;
+        margin-top: -5rem;
+        margin-left: 2rem;
+     
+    }
+    #mens-jacket-product{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #jacket-wallpaper{
+        width: 90%;
+        margin-left: 2.5rem;
+    }
+    #mens-jacket-heading{
+        font-size: 2rem;
+        font-size: 2.5rem;
+        margin:3rem 9px;
+        font-family: 'Hammersmith One', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    #dressup-shop-heading{
+        font-size: 1.2rem;
+    }
+   
+    #jacket-title{
+        height: 0;
+        width: 10rem;
+        font-size: 12px;
+        margin-top: 10px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    #jacket-type{
+        font-weight: lighter ;
+    }
+
+    #jacket-price{
+        font-weight: bold ;
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    
+    }
+    #jacket-addcart-button{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    #jacket-wishlist{
+        cursor: pointer;
+      opacity: 1;
+      margin: -2rem 0;
+      font-size: 1.5rem;
+     
+    }
+    #jacket-out-stock{
+        color: red;
+        font-size: 1.3rem;
+        margin-top: 4rem;
+           font-weight: lighter;
+    }
+}
+
+
+/* Design for Small Tablet */
+@media (max-width:769px){
+    #mens-jacket-product-iterate{
+        display: flex;
+        flex-direction: column;
+        margin-top: -5rem;
+        margin-left: 2rem;
+      
+      
+    }
+    #mens-jacket-product{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #jacket-wallpaper{
+        width: 90%;
+        margin-left: 2.5rem;
+    }
+    #mens-jacket-heading{
+        font-size: 2rem;
+        font-size: 2.5rem;
+        margin:3rem 9px;
+        font-family: 'Hammersmith One', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+    }
+    #dressup-shop-heading{
+        font-size: 1.2rem;
+    }
+   
+   
+    #jacket-title{
+        height: 0;
+        width: 20rem;
+        font-size: 12px;
+        margin-top: 10px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+    #jacket-type{
+        font-weight: lighter ;
+    }
+
+    #jacket-price{
+        font-weight: bold ;
+        margin-top: 7rem;
+        font-size: 1.5rem;
+    
+    }
+    #jacket-addcart-button{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+    }
+    #jacket-wishlist{
+        cursor: pointer;
+      opacity: 1;
+      margin: -17px 0;
+      font-size: 1.5rem;
+     
+    }
+    #jacket-out-stock{
+        color: red;
+        font-size: 1.3rem;
+        margin-top: 8rem;
+           font-weight: lighter;
+    }
+}

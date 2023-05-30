@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wishlist-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: lightseagreen;
+    font-family: 'Hammersmith One', sans-serif;
+    margin-top: 1rem;
+}
+#wishlist-heading-underline {
+    width: 5rem;
+    height: 1px;
+    background-color: lightseagreen;
+}
+#underline {
+    display: flex;
+    justify-content: center;
+}
+#product-price-heading {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    margin-left: -2rem;
+}
+#wishlist-line-parent {
+    display: flex;
+    justify-content: center;
+}
+#wishlist-line {
+    height: 0.1px;
+    width: 70vw;
+    background-color: lightseagreen;
+    margin-top: 3rem;
+}
+#product-price {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+#wishlist-amount {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-weight: lighter;
+}
+#product {
+    display: flex;
+    margin-left: -4rem;
+}
+#wishlist-name {
+    width:11rem;
+    height: 3rem;
+    font-weight: 600;
+    font-style: normal;
+    font-size: .75rem;
+    font-family: "Dosis", sans-serif;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+#delete-wishlist {
+    font-size: 1.2rem;
+    margin-top: 2.2rem;
+    margin-left: 4rem;
+    color: lightseagreen;
+    cursor: pointer;
+}
+#wishlist-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+#empty-wishlist {
+    font-size: 2rem;
+    color: lightseagreen;
+    font-weight: 500;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#wishlist-button {
+    width: 8rem;
+    height: 2rem;
+    border: 1px solid lightseagreen;
+}

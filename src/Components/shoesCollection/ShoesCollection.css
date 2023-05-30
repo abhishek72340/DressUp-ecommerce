@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#shoe-collection-name {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#shoe-collection-product {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#shoe-brand-name {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: lightseagreen;
+    opacity: 0.7;
+}
+
+#cross-price {
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: lighter;
+
+}
+
+#actual-shoe-price {
+    font-size: 1.4rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 1.3rem;
+
+}
+
+.show-product-hover {
+    animation: shoesAnimation 6s ease infinite;
+}
+
+@media (max-width:480px) {
+    #shoe-collection-name {
+        font-size: 1.3rem;
+
+    }
+
+    #shoe-brand-name {
+        font-size: 1rem;
+    }
+
+    #shoe-collection-product {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #actual-shoe-price {
+        display: flex;
+        margin-top: 5rem;
+        justify-content: center;
+
+    }
+}
+
+
+/* Design for Tablet */
+@media (max-width:1024px) {
+    #shoe-collection-name {
+        font-size: 1.3rem;
+
+    }
+
+}
+
+/* Design for Small Tablet */
+@media (max-width:769px) {
+    #shoe-collection-name {
+        font-size: 1.3rem;
+
+    }
+
+    #shoe-brand-name {
+        font-size: 1rem;
+    }
+
+    #shoe-collection-product {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #actual-shoe-price {
+        display: flex;
+        margin-top: 5rem;
+        justify-content: center;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shoesAnimation {
+
+
+    0% {
+        transform: scale(0.5);
+
+    }
+
+    50% {
+        transform: scale(1.1);
+
+    }
+
+    100% {
+        transform: scale(0.5);
+
+    }
+}

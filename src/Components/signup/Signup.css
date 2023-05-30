@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#login-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+    margin-top: 3rem;
+}
+
+#input-field {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+
+}
+
+#email-input {
+    border: 1px solid black;
+    width: 30vw;
+    height: 2.3rem;
+}
+
+#password-input {
+    border: 1px solid black;
+    width: 30vw;
+    height: 2.3rem;
+}
+
+::-webkit-input-placeholder {
+    font-family: "Dosis", sans-serif;
+}
+
+.dummy-data-button {
+    width: 30vw;
+    height: 2.3rem;
+    border: 1px solid lightseagreen;
+    background-color: lightseagreen;
+    color: white;
+}
+
+#forget-remember-password {
+    display: flex;
+    justify-content: center;
+    gap: 9.6rem;
+    margin-top: 1rem;
+}
+
+#remember-me {
+    font-size: 0.9rem;
+}
+
+#forget-password {
+    font-size: 0.75rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#login-privacy {
+    display: flex;
+    justify-content: center;
+    gap: 17rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+
+#login-logout {
+    font-size: 1.2rem;
+    color: lightseagreen;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    cursor: pointer;
+
+}
+
+#login {
+    display: flex;
+    gap: 5px;
+}
+
+#login:hover {
+    background-color: lightseagreen;
+    color: white;
+
+}
+
+#login-icon {
+    margin-top: 5px;
+}
+
+#logout {
+    display: flex;
+    gap: 10px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+#logout:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+
+#logout-icon {
+    margin-top: 5px;
+}
+
+
+/* Design For Mobile*/
+@media (max-width:480px) {
+    #email-input {
+        width: 50vw;
+    }
+
+    #password-input {
+        width: 50vw;
+    }
+
+    .dummy-data-button {
+        width: 50vw;
+
+    }
+}
+
+/* Design for Tablet */
+@media (max-width:1024px) {
+    #email-input {
+        width: 45vw;
+    }
+
+    #password-input {
+        width: 45vw;
+    }
+
+    .dummy-data-button {
+        width: 45vw;
+    }
+}
+
+/* Design for Small Tablet */
+
+@media (max-width:769px) {
+    #email-input {
+        width: 50vw;
+    }
+
+    #password-input {
+        width: 50vw;
+    }
+
+    .dummy-data-button {
+        width: 50vw;
+
+    }
+}

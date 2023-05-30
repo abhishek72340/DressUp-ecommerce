@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cart-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: lightseagreen;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#cart-heading-underline {
+    width: 2rem;
+    margin-top: 12px;
+    height: 1px;
+    background-color: lightseagreen;
+
+
+}
+
+#underline-parent {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+
+}
+
+#cart-item {
+    display: flex;
+    gap: 6rem;
+    margin-top: 4rem;
+    justify-content: center;
+
+}
+
+#cart-data {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+#cart-product-name {
+    font-weight: 600;
+    font-style: normal;
+    font-size: .75rem;
+    font-family: "Dosis", sans-serif;
+    width: 10rem;
+    height: 7rem;
+    margin-left: -5rem;
+    margin-top: 3rem;
+}
+
+#delete-cart-item {
+    color: lightseagreen;
+    cursor: pointer;
+    margin-top: 7px;
+    font-size: 1.2rem;
+}
+
+
+/* *CART-EMPTY-STYLE* */
+
+#empty-cart-gif {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#empty-cart-button {
+    width: 8rem;
+    height: 2rem;
+    border: 1px solid lightseagreen;
+}
+
+/* *CHECK-OUT STYLE */
+
+#checkout-component {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Design for Mobile */
+@media (max-width:480px) {
+    #cart-image{
+        display: flex;
+        justify-content: center;
+    }
+
+    #cart-item {
+        font-size: 1.2rem;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+    #cart-data {
+        margin-left: 10rem;
+        margin-top: -9rem;
+    }
+    #cart-product-name {
+        width: 7rem;
+        height: 7rem;
+        margin-left: 4rem;
+        margin-top: -1rem;
+    }
+
+    #cart-heading {
+        margin-top: 4rem;
+    }
+}
+
+/* Design For Tablet */
+@media (max-width:1024px) {
+    #cart-product-name {
+        width: 6rem;
+        height: 8rem;
+        margin-left: -2rem;
+        margin-top: 2em;
+    }
+}
+
+/* Design for Small Tablet */
+
+@media(max-width:769px) {
+   
+    #cart-item {
+        font-size: 1.2rem;
+        flex-direction: column;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+#cart-image{
+    display: flex;
+    justify-content: center;
+}
+    #cart-data {
+
+        margin-left: 10rem;
+        margin-top: -9rem;
+
+    }
+
+    #cart-product-name {
+        width: 7rem;
+        height: 7rem;
+        margin-left: 4rem;
+        margin-top: -1rem;
+    }
+
+    #cart-heading {
+        margin-top: 4rem;
+    }
+}

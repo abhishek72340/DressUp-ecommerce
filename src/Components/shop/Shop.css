@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#shop-banner{
+    display: flex;
+    justify-content: center;
+}
+#shop-link{
+    display: flex;
+    justify-content: center;
+      margin-top: 1rem;
+    cursor: pointer;
+    font-family: 'Hammersmith One', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#shop-link-underline{
+     width: 5rem;
+    height: 1px;
+    background-color: lightseagreen;
+}
+#link{
+    display: flex;
+    gap: 1rem;
+}
+
+#shop-section-product{
+    display: flex;
+}
+#all-product{
+    display: flex;
+    flex-wrap: wrap; 
+     gap: 2rem;
+     margin-left: 2rem;
+}
+#shop-image{
+    width: 23vw;
+}
+
+#filters-container{
+    height: 100vh;
+}
+
+
+#category-filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 10px;
+}
+
+#category-type{
+    font-weight: lighter;
+    margin-left: 2.4rem;
+    cursor: pointer;
+}
+li{
+    list-style:none;
+}
+ul li::before{
+    content: '•';
+    color: lightseagreen;
+    position: absolute;
+    margin-left: -11px;
+}
+#men-category:hover{
+    background-color: lightseagreen;
+    color:white;
+}
+#women-category:hover{
+    background-color: lightseagreen;
+    color:white;
+
+}
+#shoe-category:hover{
+    background-color: lightseagreen;
+    color:white;
+}
+
+#size-filter{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 15px;
+    cursor: pointer;
+}
+#filter-by-size{
+    display: flex;
+    justify-content: center;
+}
+#size{
+    display: flex;
+gap:5px;
+
+}
+
+.size-type{
+    width: 2.5rem;
+    height: 2rem;
+    border: 1px solid lightgray ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+.size-type:hover{
+    background-color: lightseagreen;
+    color: white;
+}
+#ratig-filter-heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+#rating{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+
+}
+.rating-type{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid lightgray;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.rating-type:hover{
+    background-color: lightseagreen;
+    color: white;
+}
+
+#price-filter-heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+#price{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.price-type{
+    width: 6rem;
+    height: 1.5rem;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.price-type:hover{
+    background-color: lightseagreen;
+    color: white;
+}
+.bestselling-dress-wishlist{
+    font-size: 1.3rem;
+}
+
+/* Design For Mobile */
+@media (max-width:480px){
+    #shop-image{
+        width: 25vw;
+        height: 25vh;
+    }
+}
+
+/* Design for Tablet */
+@media (max-width:1024px){
+    #shop-image{
+        width: 28vw;
+        height: 40vh;
+    }
+}
+
+/* Design For Small Tablet */
+@media (max-width:769px){
+    #shop-image{
+        width: 25vw;
+        height: 25vh;
+    }
+}

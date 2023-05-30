@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menu-bar {
+    cursor: pointer;
+    display: none;
+}
+
+#login {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: lightseagreen;
+    display: flex;
+}
+
+#login-icon {
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+#search-field {
+    margin-top: 5rem;
+}
+
+#side-signup {
+    margin-left: 1.3rem;
+}
+
+@media (max-width:480px) {
+    #menu-bar {
+        display: block;
+    }
+
+}

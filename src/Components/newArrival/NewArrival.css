@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#new-arrival-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    cursor: pointer;
+
+}
+
+
+.women-dress {
+    position: absolute;
+    margin-top: 22%;
+    left: 5%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.men-shirt {
+    position: absolute;
+    margin-top: 22%;
+    left: 33%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.men-jacket {
+    position: absolute;
+    right: 31%;
+    margin-top: 22%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.clothing {
+    position: absolute;
+    right: 7%;
+    margin-top: 22%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#new-arrival {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+    margin-top: 5rem;
+}
+
+#new-arrival-parent {
+    display: flex;
+    justify-content: center;
+}
+
+#new-arrival-underline {
+    width: 5rem;
+    height: 1px;
+    background-color: lightseagreen;
+
+}
+
+/* Design for Mobile */
+@media (max-width:480px){
+    .women-dress {
+        position: absolute;
+        margin-top: 60%;
+        left: 27%;
+        color: white;
+        font-size:1.5rem
+    }
+    .men-shirt {
+        position: absolute;
+        margin-top: 190%;
+        left: 37%;
+        color: white;
+        font-size:1.5rem
+    }
+    .men-jacket {
+        position: absolute;
+        right: 30%;
+        margin-top: 310%;
+        color: white;
+        font-size:1.5rem
+    }
+    .clothing {
+        position: absolute;
+        right: 33%;
+        margin-top: 440%;
+        color: white;
+        font-size:1.5rem
+    }
+
+
+}
+.arrival-product-hover :hover{
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+    filter: blur(1.7px);
+  
+}
+
+/* Design for Tablet */
+
+@media (max-width:1024px){
+
+    .women-dress {
+        position: absolute;
+        margin-top: 35%;
+        left: 5%;
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .men-shirt {
+        position: absolute;
+        margin-top: 35%;
+        left: 43%;
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .men-jacket {
+        position: absolute;
+        right: 8%;
+        margin-top: 35%;
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .clothing {
+        position: absolute;
+        right: 40%;
+        margin-top: 105%;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+/* Design for small Tablet */
+@media (max-width:769px){
+    .women-dress {
+        position: absolute;
+        margin-top: 60%;
+        left: 40%;
+        color: white;
+        font-size:1.5rem
+    }
+    .men-shirt {
+        position: absolute;
+        margin-top: 190%;
+        left:40%;
+        color: white;
+                font-size:1.5rem
+    }
+    .men-jacket {
+        position: absolute;
+        right: 40%;
+        margin-top: 310%;
+        color: white;
+                font-size:1.5rem
+    }
+    .clothing {
+        position: absolute;
+        right: 37%;
+        margin-top: 440%;
+        color: white;
+        font-size:1.5rem
+    }
+}
+

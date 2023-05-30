@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#best-selling-product-heading {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#best-selling-product-underline {
+    width: 10rem;
+    height: 1.5px;
+    background-color: lightseagreen;
+}
+
+#best-selling-product-underline-parent {
+    display: flex;
+    justify-content: center;
+}
+
+#bestselling-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+#bestselling-type {
+    font-weight: lighter;
+}
+
+#besselling-title {
+    width: 13rem;
+    height: 5rem;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+#bestselling-price {
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+#bestselling-price-add-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1rem;
+}
+
+.bestselling-dress-wishlist {
+    font-size: 1.3rem;
+}
+
+#bestselling-out-stock {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-top: -1rem;
+}
+
+#bestselling-out-stock-button {
+    position: absolute;
+    margin-top: -5rem;
+    margin-left: 2.5rem;
+    width: 10rem;
+    height: 1.5rem;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ #about-stylish-clothing{
+    display: flex;
+    justify-content: center;
+font-weight: 500;
+margin-top: 3rem;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#styling{
+    max-width:90vw;
+    min-height: 20vh;
+    font-size: 13px;
+    margin-top: 1.5rem;
+}
+#about-style{
+       display: flex;
+    justify-content: center;
+}
+
+#shipping{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 27rem;
+}
+
+/* Design for Mobile */
+@media (max-width:480px) {
+
+    #bestselling-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #besselling-title {
+        width: 26rem;
+
+    }
+
+    #bestselling-price-add-button {
+        margin-top: 5px;
+    }
+
+    #bestselling-out-stock {
+        margin-top: 5px;
+
+    }
+    #bestselling-out-stock-button {
+
+        margin-top: -11rem;
+        margin-left: 8rem;
+    }
+    #about-stylish-clothing{
+            margin-left: 8px;
+    }
+    #shipping{
+        margin-left: 16rem;
+    }
+}
+
+/* Design for Tablet */
+@media (max-width:1024px) {
+    #bestselling-product {
+        display: flex;
+        flex-direction: column;
+    }
+    #about-stylish-clothing{
+    font-size: 13px;
+    }
+    #shipping{
+        margin-left: 17rem;
+    }
+}
+
+@media (max-width:769px){
+    #bestselling-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #besselling-title {
+        width: 26rem;
+
+    }
+
+    #bestselling-price-add-button {
+        margin-top: 5px;
+    }
+
+    #bestselling-out-stock {
+        margin-top: 5px;
+
+    }
+    #bestselling-out-stock-button {
+
+        margin-top: -11rem;
+        margin-left: 8rem;
+    }
+    #about-stylish-clothing{
+            margin-left: 8px;
+    }
+    #shipping{
+    margin-left: 16rem;
+}
+
+}

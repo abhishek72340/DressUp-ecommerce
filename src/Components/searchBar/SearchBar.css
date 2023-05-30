@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#search-field {
+    display: flex;
+    justify-content: center;
+
+}
+
+#search-input {
+    width: 22rem;
+    height: 2rem;
+    margin-left: 3rem;
+    border: 1px solid gray;
+}
+
+::-webkit-input-placeholder {
+    font-size: 13px;
+    padding: 5px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+#search-content {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-family: 'Hammersmith One', sans-serif;
+    opacity: 0.7;
+
+}
+
+#top-bar-search-icon {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-left: -1.4rem;
+}
+
+#searchicon-of-navbar {
+    cursor: pointer;
+    display: block;
+}
+
+#search-product-data {
+    width: 25vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+::-webkit-scrollbar {
+    border-radius: 50%;
+}
+
+#search-single-product-title {
+    width: 7rem;
+    height: 2rem;
+    font-size: 0.5rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#search-product-data-container {
+    display: flex;
+    justify-content: center;
+}
+
+#single-product-image-title {
+    display: flex;
+    gap: 1.3rem;
+}
+
+#search-image {
+    display: flex;
+    margin-top: 5px;
+    width: 4rem;
+    height: 4rem;
+
+}
+
+#img-search {
+    width: 200px;
+}
+
+@media (max-width:480px) {
+    #searchicon-of-navbar {
+        display: none;
+    }
+
+    ::-webkit-input-placeholder {
+        font-size: 10px;
+        padding: 5px;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+    }
+
+    #search-icon {
+        font-size: 1rem;
+        opacity: 0.5;
+        margin: 5px -1.4rem;
+
+    }
+
+}

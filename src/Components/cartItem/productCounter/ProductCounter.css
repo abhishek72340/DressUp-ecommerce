@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#product-counter{
+    display: flex;
+    gap:10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
