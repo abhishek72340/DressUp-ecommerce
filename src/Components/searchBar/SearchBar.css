@@ -56,7 +56,8 @@
 }
 
 ::-webkit-scrollbar {
-    border-radius: 50%;
+    width:1px ;
+   
 }
 
 #search-single-product-title {

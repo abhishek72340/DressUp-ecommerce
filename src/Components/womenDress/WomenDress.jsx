@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import './WomenDress.css';
 import { useNavigate } from 'react-router-dom';
 import { useProduct } from '../../context/product-context';
@@ -14,6 +14,7 @@ import {
   Stack
 } from '@chakra-ui/react';
 export const WomenDress = () => {
+  const [disable,setDisable]=useState(false);
   const { state } = useProduct();
   const { products } = state;
   const { addToCart, cartItems, goToCartHandler } = useCart();
@@ -71,7 +72,10 @@ export const WomenDress = () => {
                             womendress.stock ? <div id='price-add-button'>
                               <p id='womendress-price'>${womendress.price}.00</p>
                               <Stack direction='row' spacing={4} align='center' >
-                                <Button colorScheme='teal' variant='outline' onClick={() => addToCart(womendress)}>Add To Cart</Button>
+                                <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
+                                  addToCart(womendress)
+                                  setDisable(true)
+                                 }} >Add To Cart</Button>
                               </Stack>
                             </div> : null
                           }

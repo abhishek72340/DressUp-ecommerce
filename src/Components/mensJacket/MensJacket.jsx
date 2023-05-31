@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MensJacket.css';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/cart-context';
@@ -14,12 +14,14 @@ import {
   Stack
 } from '@chakra-ui/react';
 export const MensJacket = () => {
+  const [disable, setDisable] = useState(false);
   const { state } = useProduct();
   const { products } = state;
-  const { addToCart, cartItems, goToCartHandler, disable } = useCart();
+  const { addToCart, cartItems, goToCartHandler } = useCart();
   const { addToWishlist, wishlistItem } = useWishlist();
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+  const token = localStorage.getItem('token');
   return (
     <div>
       <div id='mens-jacket-product'>
@@ -66,17 +68,25 @@ export const MensJacket = () => {
                           <div>
                             {
                               jacket.stock ? <Stack direction='row' spacing={4} align='center' id='jacket-addcart-button'>
-                                {jacket.stock ? <p id='jacket-price'>${jacket.price}.00</p> : null}
-                                <Button disabled={disable} colorScheme='teal' variant='outline' onClick={() => addToCart(jacket)}  >
-                                  Add To Cart</Button>
-                              </Stack> : <p id='jacket-out-stock'>Out Of Stock</p>
+                                {
+                                  jacket.stock ? <p id='jacket-price'>${jacket.price}.00</p> : null
+                                }
+                                <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
+                                  addToCart(jacket)
+                                  setDisable(true)
+                                }}>Add To Cart</Button>
+                              </Stack>:<p id='jacket-out-stock'>Out Of Stock</p>
                             }
                           </div>
                       }
 
                       {
                         wishlistItem.find(item => item._id === jacket._id) ? <AiFillHeart className='jacket-wishlist' onClick={() => navigate('/wishlist')} /> :
-                          <span> {jacket.stock ? <span onClick={() => addToWishlist(jacket)}><AiOutlineHeart className='jacket-wishlist' /></span> : null}</span>
+                          <span>
+                            {
+                              jacket.stock ? <span onClick={() => {addToWishlist(jacket)}} ><AiOutlineHeart className='jacket-wishlist' /></span> : null
+                            }
+                          </span>
                       }
                     </Box>
                   </Center>

@@ -15,7 +15,7 @@
 }
 #wishlist-heading-underline {
     width: 5rem;
-    height: 1px;
+    height: 0.5px;
     background-color: lightseagreen;
 }
 #underline {
@@ -37,7 +37,7 @@
 }
 #wishlist-line {
     height: 0.1px;
-    width: 70vw;
+    width: 80vw;
     background-color: lightseagreen;
     margin-top: 3rem;
 }
@@ -53,7 +53,6 @@
 }
 #product {
     display: flex;
-    margin-left: -4rem;
 }
 #wishlist-name {
     width:11rem;

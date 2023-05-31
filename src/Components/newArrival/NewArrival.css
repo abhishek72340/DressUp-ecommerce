@@ -11,9 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     cursor: pointer;
-
 }
-
 
 .women-dress {
     position: absolute;
@@ -64,54 +62,52 @@
     width: 5rem;
     height: 1px;
     background-color: lightseagreen;
-
 }
 
 /* Design for Mobile */
-@media (max-width:480px){
+@media (max-width:480px) {
     .women-dress {
         position: absolute;
         margin-top: 60%;
         left: 27%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .men-shirt {
         position: absolute;
         margin-top: 190%;
         left: 37%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .men-jacket {
         position: absolute;
         right: 30%;
         margin-top: 310%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .clothing {
         position: absolute;
         right: 33%;
         margin-top: 440%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
-
-
 }
-.arrival-product-hover :hover{
+
+.arrival-product-hover :hover {
     transform: scale(1.05);
     transition: 1s;
     cursor: pointer;
     filter: blur(1.7px);
-  
 }
 
 /* Design for Tablet */
-
-@media (max-width:1024px){
-
+@media (max-width:1024px) {
     .women-dress {
         position: absolute;
         margin-top: 35%;
@@ -119,7 +115,7 @@
         color: white;
         font-size: 1.5rem;
     }
-    
+
     .men-shirt {
         position: absolute;
         margin-top: 35%;
@@ -127,7 +123,7 @@
         color: white;
         font-size: 1.5rem;
     }
-    
+
     .men-jacket {
         position: absolute;
         right: 8%;
@@ -135,7 +131,7 @@
         color: white;
         font-size: 1.5rem;
     }
-    
+
     .clothing {
         position: absolute;
         right: 40%;
@@ -146,34 +142,36 @@
 }
 
 /* Design for small Tablet */
-@media (max-width:769px){
+@media (max-width:769px) {
     .women-dress {
         position: absolute;
         margin-top: 60%;
         left: 40%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .men-shirt {
         position: absolute;
         margin-top: 190%;
-        left:40%;
+        left: 40%;
         color: white;
-                font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .men-jacket {
         position: absolute;
         right: 40%;
         margin-top: 310%;
         color: white;
-                font-size:1.5rem
+        font-size: 1.5rem
     }
+
     .clothing {
         position: absolute;
         right: 37%;
         margin-top: 440%;
         color: white;
-        font-size:1.5rem
+        font-size: 1.5rem
     }
 }
-

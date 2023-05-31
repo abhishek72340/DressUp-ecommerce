@@ -11,18 +11,16 @@ import {
 } from '@chakra-ui/react';
 
 export const ShoesCollection = () => {
-  const { state, dispatch } = useProduct();
+  const { state } = useProduct();
   const { products } = state;
-  const navigate=useNavigate();
-
-  const shoeHandle=()=>{
+  const navigate = useNavigate();
+  const shoeHandle = () => {
     navigate('/shop')
     window.scrollTo({
-      top:0,           
+      top: 0,
       behavior: 'instant'
-    }); 
-   }
-   
+    });
+  };
   return (
     <div>
       <div ID='shoe-brand-name'>
@@ -35,7 +33,7 @@ export const ShoesCollection = () => {
         <span>Old Skool Ultramarine</span>
         <span>Original Superstar</span>
       </div>
-
+      
       <div id='shoe-collection-product'>
         {
           products.slice(12, 15).map((shoe) => {

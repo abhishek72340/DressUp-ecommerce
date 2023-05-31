@@ -1,4 +1,5 @@
 import './Shop.css';
+import {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useProduct } from '../../context/product-context';
 import { useCart } from '../../context/cart-context';
@@ -14,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { getSortedProducts } from '../../utils/FilterUtils';
 export const Shop = () => {
+  const [disable,setDisable]=useState(false);
   const { products, sortBy, dispatch } = useProduct();
   const { addToCart, cartItems, goToCartHandler } = useCart();
   const { addToWishlist, wishlistItem } = useWishlist();
@@ -23,6 +25,7 @@ export const Shop = () => {
   const sizes = ['L', 'M', 'S', 'US10', 'US6', 'US7'];
   const rating = [1, 2, 3, 4, 5];
 
+ 
   return (
     <div >
       <span id='shop-banner'>
@@ -32,7 +35,7 @@ export const Shop = () => {
         <span id='link'>
           <p onClick={() => { dispatch({ type: 'SORT', payload: 'ALL' }) }}>ALL</p>
           <p style={{ color: 'lightseagreen' }}>/</p>
-          <p onClick={() => { dispatch({ type: 'SORT', payload: 'SHOES' }) }}>SHOES</p>
+           <p onClick={() => { dispatch({ type: 'SORT', payload: 'SHOES' }) }}>SHOES</p>
           <p style={{ color: 'lightseagreen' }}>/</p>
           <p onClick={() => { dispatch({ type: 'SORT', payload: 'CLOTHING' }) }}>CLOTHING</p>
         </span>
@@ -120,13 +123,16 @@ export const Shop = () => {
                         : <div>{allproduct.stock ? <div id='bestselling-price-add-button'>
                           <span id='bestselling-price'>${allproduct.price}.00</span>
                           <Stack direction='row' spacing={4} align='center' >
-                            <Button colorScheme='teal' variant='outline' onClick={() => addToCart(allproduct._id)}>Add To Cart</Button>
+                            <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
+                                  addToCart(allproduct)
+                                  setDisable(true)
+                                 }} >Add To Cart</Button>
                           </Stack>
                         </div> : null}
                           {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}</div>}
 
 
-                      {wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> : <span onClick={() => addToWishlist(allproduct._id)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>}
+                      {wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> : <span onClick={() => addToWishlist(allproduct)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>}
                     </Box>
                   </Center>
 
@@ -169,7 +175,10 @@ export const Shop = () => {
                         : <div>{allproduct.stock ? <div id='bestselling-price-add-button'>
                           <span id='bestselling-price'>${allproduct.price}.00</span>
                           <Stack direction='row' spacing={4} align='center' >
-                            <Button colorScheme='teal' variant='outline' onClick={() => addToCart(allproduct)}>Add To Cart</Button>
+                            <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
+                              addToCart(allproduct)
+                              setDisable(true)
+                            }}>Add To Cart</Button>
                           </Stack>
                         </div> : null}
                           {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}</div>}

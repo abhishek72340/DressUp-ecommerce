@@ -14,21 +14,14 @@ import {SideBar} from '../sideBar/SideBar';
   const Navbar = () => {
     const{cartItems}=useCart();
     const {wishlistItem}=useWishlist();
-
-    const navigate=useNavigate();
-    // const token = localStorage.getItem('token')
+    // const navigate=useNavigate();
 
     const getActiveStyle=({isActive})=>({
       color:isActive?'lightseagreen':''
-    })
-
-
-
+    });
   return (
-    <header>
-    
+    <header>    
     <nav className='navbar'>
-
 <span><SideBar/><SearchBar/></span>
     <div id='logo-link'>
     <NavLink to='/'><img src="/images/logo.webp" alt="logo" id='logo'/></NavLink>
@@ -45,16 +38,13 @@ import {SideBar} from '../sideBar/SideBar';
     <NavLink to='/wishlist'><AiOutlineHeart/></NavLink>
     <span className='wishlist-badge'>{wishlistItem.length}</span>
     </span>
-
     <span>
    <NavLink to='/cart'> <HiOutlineShoppingBag /></NavLink>
     <span className='cart-badge'>{cartItems.length}</span>
     </span>
     </div>
-        </nav>
-      
+     </nav>     
  </header>
   )
 }
-
 export {Navbar};

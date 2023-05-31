@@ -5,23 +5,21 @@ const cartContext = createContext();
 
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
-    const [disable,setDisable]=useState(false);
     const navigate = useNavigate();
 
     const token = localStorage.getItem("token");
-    const addToCart = async (product) => {
+   const addToCart = async (product) => {
         try {
             const { data } = await axios.post('/api/user/cart',
-                { product }, { headers: { authorization: token } }
+             { product }, { headers: { authorization: token } }
             )
             setCartItems(data.cart)
         }
         catch (error) {
-            alert(error)
+       alert(error)
         }
-        setDisable(true);
-    };
-
+     }
+  
     const removeCartItem = async (id) => {
         try {
             const { data } = await axios.delete(`/api/user/cart/${id}`,
@@ -34,7 +32,6 @@ const CartProvider = ({ children }) => {
         }
 
     };
-
     const updateQuantity = async (actionType, id) => {
         try {
             const { data } = await axios.post(
@@ -57,7 +54,7 @@ const CartProvider = ({ children }) => {
         window.scrollTo({ top: 0, scroll: 'instant' })
     }
     return (
-        <cartContext.Provider value={{disable, updateQuantity, removeCartItem, cartItems, addToCart, goToCartHandler, setCartItems }} >
+        <cartContext.Provider value={{ updateQuantity, removeCartItem, cartItems, addToCart, goToCartHandler, setCartItems }} >
             {children}
         </cartContext.Provider>
     )
