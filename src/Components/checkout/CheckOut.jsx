@@ -20,7 +20,7 @@ export const CheckOut = () => {
   return (
     <div>
 
-      <div id='check-out-box'>
+      <div id='check-out-box' >
         <div id='check-out'>
           <div id='checkout-data'>
             <div id='cart-subtotal'>

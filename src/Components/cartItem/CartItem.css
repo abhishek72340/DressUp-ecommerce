@@ -65,7 +65,6 @@
 
 
 /* *CART-EMPTY-STYLE* */
-
 #empty-cart-gif {
     display: flex;
     flex-direction: column;
@@ -81,10 +80,9 @@
 }
 
 /* *CHECK-OUT STYLE */
-
 #checkout-component {
     display: flex;
-    justify-content: flex-end;
+       justify-content: flex-end;
 }
 
 /* Design for Mobile */

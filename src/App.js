@@ -16,9 +16,6 @@ import {Cart} from './Components/cartItem/Cart';
 import { SingleProduct } from './Components/singleProduct/SingleProduct';
 import { ErrorPage } from './Components/errorPage/ErrorPage';
 
-// import { SearchBar } from './Components/searchBar/SearchBar';
-
-
 export const App = () => {
   return (
     <div>

@@ -8,18 +8,20 @@ const CartProvider = ({ children }) => {
     const navigate = useNavigate();
 
     const token = localStorage.getItem("token");
-   const addToCart = async (product) => {
+    const addToCart = async (product) => {
         try {
             const { data } = await axios.post('/api/user/cart',
-             { product }, { headers: { authorization: token } }
+                { product }, { headers: { authorization: token } }
             )
             setCartItems(data.cart)
+            console.log(data)
         }
         catch (error) {
-       alert(error)
+            navigate('/login')
+            window.scrollTo({ top: 0, scroll: 'instant' })
         }
-     }
-  
+    }
+
     const removeCartItem = async (id) => {
         try {
             const { data } = await axios.delete(`/api/user/cart/${id}`,
@@ -34,8 +36,7 @@ const CartProvider = ({ children }) => {
     };
     const updateQuantity = async (actionType, id) => {
         try {
-            const { data } = await axios.post(
-                `/api/user/cart/${id}`,
+            const { data } = await axios.post(`/api/user/cart/${id}`,
                 {
                     action: {
                         type: actionType

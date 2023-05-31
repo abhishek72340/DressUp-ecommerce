@@ -12,9 +12,10 @@ import { AiOutlineLogout } from 'react-icons/ai';
 export const Account = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('right')
-
     const { setCartItems } = useCart();
     const { setWishlistItem } = useWishlist();
+    // const [userToken, setUserToken] = useState();
+    // const [userDetail, setUserDetail] = useState();
 
     const token = localStorage.getItem('token')
     const userLogOut = () => {
@@ -33,7 +34,16 @@ export const Account = () => {
     const signupRedirectHandler = () => {
         navigate('/signup')
         onClose(true)
-    }
+    };
+
+    // useEffect(() => {
+    //     let token = localStorage.getItem("token");
+    //     if (token) {
+    //         setUserToken(token);
+    //         setUserDetail(JSON.parse(localStorage.getItem("foundUser")));
+
+    //     }
+    // }, [userToken]);
     return (
         <div>
             <RadioGroup defaultValue={placement} onChange={setPlacement}>
@@ -50,7 +60,8 @@ export const Account = () => {
                         
                         {!token ? <div><span id='login' onClick={loginRedirectHandler}><span >Login</span> <FiLogIn id='login-icon' /></span>  
                         <span id='logout' onClick={signupRedirectHandler}> <span >Signup</span> <CgLogOut id='logout-icon' /></span></div>:<span id='login' onClick={userLogOut} ><span>Logout</span> <AiOutlineLogout id='login-icon' /></span>}
-
+                
+                {/* {userDetail?userDetail?.name:'login'} */}
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
