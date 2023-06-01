@@ -28,7 +28,7 @@ export const WishlistItem = () => {
                 </span>
                 <span id='wishlist-amount'>${item.price}.00</span>
 
-               <Stack direction='row' spacing={4} align='center'>
+               <Stack direction='row' spacing={4} align='center' id='wishlist-addcart-button'>
                  <Button  colorScheme='teal' variant='outline' onClick={()=>{addToCart(item)}}>Add To Cart</Button></Stack>
         
               </div>

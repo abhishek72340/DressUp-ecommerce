@@ -56,6 +56,10 @@
   font-size: 1.3rem;
  
 }
+#jacket-type-wishlist{
+    display: flex;
+    justify-content: space-between;
+}
 #jacket-out-stock{
     color: red;
     font-size: 1.3rem;

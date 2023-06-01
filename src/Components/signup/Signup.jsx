@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useToast } from '../../context/toast-context';
 import SignupService from '../../services/SignupService';
 import { Module } from '../../module/Module';
 
 export const Signup = () => {
-  const navigate = useNavigate();
-
   const [userData, setUserData] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
-  })
+  });
+  const navigate = useNavigate();
+  const { notifyError, notifySuccess } = useToast();
+
   let name, value;
   const handelInput = (e) => {
     name = e.target.name
@@ -24,12 +26,13 @@ export const Signup = () => {
       try {
         const response = await SignupService(userData)
         localStorage.setItem('token', response.data.encodedToken)
-        navigate('/')
+        navigate('/');
+        notifySuccess('Signup Sucessfully')
       } catch (error) {
         alert(error)
       }
     } else {
-      alert('password dont match')
+      notifyError('Password Did Not Match')
     }
   }
 
@@ -38,12 +41,12 @@ export const Signup = () => {
 
       <span id='login-heading'>Signup</span>
 
-      <form id='input-field'>
+      <form id='input-field' onSubmit={addNewUser}>
         <input type="text" name='name' onChange={handelInput} value={userData.name} placeholder='NAME' id='password-input' />
         <input type="email" name='email' onChange={handelInput} value={userData.email} placeholder='EMAIL' id='email-input' />
         <input type="password" name='password' onChange={handelInput} value={userData.password} placeholder='PASSWORD' id='password-input' />
         <input type="password" name='confirmPassword' onChange={handelInput} value={userData.confirmPassword} placeholder='CONFIRM PASSWORD' id='password-input' />
-        <button className='dummy-data-button' onClick={addNewUser}>signup</button>
+        <button type='submit' className='dummy-data-button'  >signup</button>
       </form>
 
       <div id='login-privacy'>

@@ -14,7 +14,6 @@ import {
 } from '@chakra-ui/react';
 export const SingleProduct = () => {
   const { state, dispatch } = useProduct();
-  // const { products } = state;
   const { Id } = useParams();
   const [imgShow, setImgShow] = useState('')
   const [productData, setProductData] = useState([]);
@@ -32,7 +31,7 @@ export const SingleProduct = () => {
     <div>
       {
       !productData ? <div id='single-product-error'>
-        <img src="https://c.tenor.com/51cJwccNPl4AAAAi/capoo-bugcat.gif" alt="load" />
+        <img src="/images/single-product-image.gif" alt="load" />
         <span>Sorry we got some Error. Please go back</span>
         <Module />
        </div> :

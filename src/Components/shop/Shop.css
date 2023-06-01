@@ -170,6 +170,10 @@ align-items: center;
 .bestselling-dress-wishlist{
     font-size: 1.3rem;
 }
+.shop-type-wishlist{
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Design For Mobile */
 @media (max-width:480px){

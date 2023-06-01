@@ -35,7 +35,14 @@ export const FilterCard = ({ allproduct }) => {
                         />
                     </Box>
                     {allproduct.stock ? null : <p id='bestselling-out-stock-button'>Out Of Stock</p>}
-                    <span id='bestselling-type'>{allproduct.type}</span>
+
+                    <div className='shop-type-wishlist'>
+                        <span id='bestselling-type'>{allproduct.type}</span>
+                        {
+                            wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> :
+                                <span onClick={() => addToWishlist(allproduct)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>
+                        }
+                    </div>
                     <p id='besselling-title'>{allproduct.title}</p>
 
                     {
@@ -67,11 +74,6 @@ export const FilterCard = ({ allproduct }) => {
                                 }
                                 {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}
                             </div>
-                    }
-
-                    {
-                        wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> :
-                            <span onClick={() => addToWishlist(allproduct)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>
                     }
                 </Box>
             </Center>

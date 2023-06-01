@@ -35,7 +35,8 @@
     display: flex;
     gap: 6rem;
     margin-top: 4rem;
-    justify-content: center;
+    margin-left: 4rem;
+    justify-content: flex-start;
 
 }
 
@@ -81,13 +82,15 @@
 
 /* *CHECK-OUT STYLE */
 #checkout-component {
-    display: flex;
-       justify-content: flex-end;
+    position: fixed;
+    top: 40%;
+    right: 0;
+
 }
 
 /* Design for Mobile */
 @media (max-width:480px) {
-    #cart-image{
+    #cart-image {
         display: flex;
         justify-content: center;
     }
@@ -97,10 +100,12 @@
         margin-top: 4rem;
         margin-left: 2rem;
     }
+
     #cart-data {
         margin-left: 10rem;
         margin-top: -9rem;
     }
+
     #cart-product-name {
         width: 7rem;
         height: 7rem;
@@ -126,17 +131,19 @@
 /* Design for Small Tablet */
 
 @media(max-width:769px) {
-   
+
     #cart-item {
         font-size: 1.2rem;
         flex-direction: column;
         margin-top: 4rem;
         margin-left: 2rem;
     }
-#cart-image{
-    display: flex;
-    justify-content: center;
-}
+
+    #cart-image {
+        display: flex;
+        justify-content: center;
+    }
+
     #cart-data {
 
         margin-left: 10rem;

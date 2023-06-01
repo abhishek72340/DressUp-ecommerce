@@ -12,16 +12,16 @@ import { Wishlist } from './Components/wishlist/Wishlist';
 import { Login } from './Components/signup/Login';
 import { Signup } from './Components/signup/Signup';
 import { ForgotPassword } from './Components/signup/ForgotPassword';
-import {Cart} from './Components/cartItem/Cart';
+import { Cart } from './Components/cartItem/Cart';
 import { SingleProduct } from './Components/singleProduct/SingleProduct';
+import { Address } from './Components/address/Address';
 import { ErrorPage } from './Components/errorPage/ErrorPage';
-
+import { ToastContainer } from 'react-toastify';
 export const App = () => {
   return (
     <div>
       <Navbar />
-
-
+      <ToastContainer />
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/shop' element={<Shop />} />
@@ -34,12 +34,11 @@ export const App = () => {
         <Route path='/signup' element={<Signup />} />
         <Route path='/forgotpassword' element={<ForgotPassword />} />
         <Route path='/cart' element={<Cart />} />
-        <Route path='/singleproduct/:Id' element={<SingleProduct/>} />
-        <Route path='*' element={<ErrorPage/>} />
-
+        <Route path='/singleproduct/:Id' element={<SingleProduct />} />
+        <Route path='/address' element={<Address />} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
-
     </div>
   )
 }

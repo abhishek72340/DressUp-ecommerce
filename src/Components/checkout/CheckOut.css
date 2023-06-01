@@ -22,7 +22,7 @@
 #cart-subtotal {
     display: flex;
     justify-content: space-around;
-    margin-left: -2.6rem;
+    gap:3rem;
 }
 
 #subtotal-ammount {
@@ -30,36 +30,17 @@
 
 }
 
-#shipping-to {
+#input-address {
     font-weight: lighter;
 }
 
 #shipping-cart-product {
     display: flex;
     justify-content: space-around;
-
-}
-
-#change-address {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5rem;
-    font-size: 13px;
-    margin-top: -1.5rem;
-    cursor: pointer;
-    font-family: 'Hammersmith One', sans-serif;
-}
-
-#change-address-input {
-    border: 1px solid black;
-}
-
-#shipping-address {
-    font-family: 'Hammersmith One', sans-serif;
 }
 
 #horizontal-line {
-    height: 1.5px;
+    height: 1px;
     background-color: lightseagreen;
     width: 20vw;
     margin-top: 4rem;
@@ -139,7 +120,7 @@
         margin-top: 2.5rem;
 
     }
-   
+
 }
 
 /* Design for Tablet */
@@ -194,7 +175,7 @@
         margin-right: 2rem;
     }
 
-    #change-address{
+    #change-address {
         font-size: 10px;
     }
 

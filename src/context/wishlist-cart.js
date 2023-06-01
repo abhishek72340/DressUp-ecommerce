@@ -1,10 +1,11 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 import axios from 'axios';
-import { useProduct } from "./product-context";
+import { useToast } from "./toast-context";
 const wishlistContext = createContext();
 
 const WishlistProvider = ({ children }) => {
     const [wishlistItem, setWishlistItem] = useState([]);
+    const {notifySuccess,notifyError} =useToast();
 
     const addToWishlist = async (product) => {
         const token = localStorage.getItem("token");
@@ -12,13 +13,13 @@ const WishlistProvider = ({ children }) => {
             const { data } = await axios.post('/api/user/wishlist',
                 { product }, { headers: { authorization: token } }
             )
-            setWishlistItem(data.wishlist)
+            setWishlistItem(data.wishlist);   
+            notifySuccess('added item successfully')         
         }
         catch (error) {
             alert(error)
         }       
     };
-
     const removeJacketWishlist = async (id) => {
         const token = localStorage.getItem("token");
         try {
@@ -26,6 +27,8 @@ const WishlistProvider = ({ children }) => {
                 { headers: { authorization: token } }
             )
             setWishlistItem(data.wishlist)
+            notifyError('Item Deleted') 
+
         }
         catch (error) {
             alert(error)

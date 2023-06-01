@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 #wishlist-heading {
     display: flex;
     justify-content: center;
@@ -13,15 +14,18 @@
     font-family: 'Hammersmith One', sans-serif;
     margin-top: 1rem;
 }
+
 #wishlist-heading-underline {
     width: 5rem;
     height: 0.5px;
     background-color: lightseagreen;
 }
+
 #underline {
     display: flex;
     justify-content: center;
 }
+
 #product-price-heading {
     display: flex;
     justify-content: space-evenly;
@@ -31,31 +35,37 @@
     font-size: 0.9rem;
     margin-left: -2rem;
 }
+
 #wishlist-line-parent {
     display: flex;
     justify-content: center;
 }
+
 #wishlist-line {
     height: 0.1px;
     width: 80vw;
     background-color: lightseagreen;
     margin-top: 3rem;
 }
+
 #product-price {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1rem;
 }
+
 #wishlist-amount {
     font-size: 1.3rem;
     margin-top: 2rem;
     font-weight: lighter;
 }
+
 #product {
     display: flex;
 }
+
 #wishlist-name {
-    width:11rem;
+    width: 11rem;
     height: 3rem;
     font-weight: 600;
     font-style: normal;
@@ -64,6 +74,7 @@
     margin-top: 2rem;
     margin-left: 1rem;
 }
+
 #delete-wishlist {
     font-size: 1.2rem;
     margin-top: 2.2rem;
@@ -71,6 +82,7 @@
     color: lightseagreen;
     cursor: pointer;
 }
+
 #wishlist-container {
     display: flex;
     flex-direction: column;
@@ -79,14 +91,20 @@
     gap: 2rem;
     margin-top: 3rem;
 }
+
 #empty-wishlist {
     font-size: 2rem;
     color: lightseagreen;
     font-weight: 500;
     font-family: 'Hammersmith One', sans-serif;
 }
+
 #wishlist-button {
     width: 8rem;
     height: 2rem;
     border: 1px solid lightseagreen;
+}
+
+#wishlist-addcart-button {
+    margin-top: -1rem;
 }

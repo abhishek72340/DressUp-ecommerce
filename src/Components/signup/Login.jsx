@@ -1,16 +1,17 @@
 import React,{useState} from 'react'
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
-// import { useAccount } from '../../context/account-context';
+import {useToast} from '../../context/toast-context';
 import LoginService from '../../services/LoginService';
 import { Module } from '../../../src/module/Module';
 export const Login = () => {
 const navigate = useNavigate();
-
+// const [userToken, setUserToken] = useState();
 const [userDetails,setUserDetails] = useState({
     email:'',
     password:''
   })
+  const {notifySuccess,notifyError} =useToast();
   
   const dummyUser = {
     email: "abhisingh.72340@gmail.com",
@@ -31,29 +32,39 @@ const [userDetails,setUserDetails] = useState({
     try {
       const res = await LoginService(userDetails)
       localStorage.setItem('token',res.data.encodedToken)
-      navigate('/')
+      navigate('/');
+      notifySuccess('login successfully')
     } catch (error) {
-      alert("USER NOT FOUND")
+      notifyError('User Not Found')
     }
     
-  }
+  };
+//   useEffect(() => {
+//     let token = localStorage.getItem("token");
+//     if (token) {
+//         setUserToken(token);
+//         setUserDetails(JSON.parse(localStorage.getItem("foundUser")));
+
+//     }
+// }, [userToken]);
 
     return (
         <div>
             <span id='login-heading'>Login</span>
 
-            <form id='input-field'>
-
+            <form id='input-field' onSubmit={submitData}>
                 <input type="email" name='email' value={userDetails.email} onChange={LoginDataHandler} placeholder='EMAIL' id='email-input' />
                 <input type="password" name='password'  value={userDetails.password} onChange={LoginDataHandler}  placeholder='PASSWORD' id='password-input' />
                 <button className='dummy-data-button'  onClick={applyDummyData}>Click To Apply Dummy Data</button>
-                <button className='dummy-data-button' onClick={submitData}>Login</button>
+                <button type='submit' className='dummy-data-button' >Login</button>
             </form>
 
             <div id='forget-remember-password'>
                 <span id='remember-me'><input type="checkbox" />Remember Me</span>
                 <span id='forget-password' onClick={() => navigate('/forgotpassword')}>Forget Your Password</span>
             </div>
+
+            {/* {userDetails?userDetails.email:'login'} */}
 
             <Module />
         </div>

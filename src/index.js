@@ -8,25 +8,24 @@ import { BrowserRouter } from 'react-router-dom';
 import { ProductProvider } from "./context/product-context";
 import { CartProvider } from './context/cart-context';
 import { WishlistProvider } from "./context/wishlist-cart";
-// import { AccountProvider } from "./context/account-context";
-
+import { ToastProvider } from './context/toast-context';
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter >
-      <ProductProvider>
-        <CartProvider>
-          <WishlistProvider>
-            {/* <AccountProvider> */}
+      <ToastProvider>
+        <ProductProvider>
+          <CartProvider>
+            <WishlistProvider>
               <ChakraProvider>
                 <App />
               </ChakraProvider>
-            {/* </AccountProvider> */}
-          </WishlistProvider>
-        </CartProvider>
-      </ProductProvider>
+            </WishlistProvider>
+          </CartProvider>
+        </ProductProvider>
+      </ToastProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

@@ -55,6 +55,12 @@
 
 .bestselling-dress-wishlist {
     font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+#bestselling-type-wishlist {
+    display: flex;
+    justify-content: space-between;
 }
 
 #bestselling-out-stock {
@@ -76,25 +82,28 @@
     justify-content: center;
     align-items: center;
 }
- #about-stylish-clothing{
+
+#about-stylish-clothing {
     display: flex;
     justify-content: center;
-font-weight: 500;
-margin-top: 3rem;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#styling{
-    max-width:90vw;
+
+#styling {
+    max-width: 90vw;
     min-height: 20vh;
     font-size: 13px;
     margin-top: 1.5rem;
 }
-#about-style{
-       display: flex;
+
+#about-style {
+    display: flex;
     justify-content: center;
 }
 
-#shipping{
+#shipping {
     display: flex;
     justify-content: space-around;
     width: 30%;
@@ -122,15 +131,18 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         margin-top: 5px;
 
     }
+
     #bestselling-out-stock-button {
 
         margin-top: -11rem;
         margin-left: 8rem;
     }
-    #about-stylish-clothing{
-            margin-left: 8px;
+
+    #about-stylish-clothing {
+        margin-left: 8px;
     }
-    #shipping{
+
+    #shipping {
         margin-left: 16rem;
     }
 }
@@ -141,15 +153,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         display: flex;
         flex-direction: column;
     }
-    #about-stylish-clothing{
-    font-size: 13px;
+
+    #about-stylish-clothing {
+        font-size: 13px;
     }
-    #shipping{
+
+    #shipping {
         margin-left: 17rem;
     }
 }
 
-@media (max-width:769px){
+@media (max-width:769px) {
     #bestselling-product {
         display: flex;
         flex-direction: column;
@@ -168,16 +182,19 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         margin-top: 5px;
 
     }
+
     #bestselling-out-stock-button {
 
         margin-top: -11rem;
         margin-left: 8rem;
     }
-    #about-stylish-clothing{
-            margin-left: 8px;
+
+    #about-stylish-clothing {
+        margin-left: 8px;
     }
-    #shipping{
-    margin-left: 16rem;
-}
+
+    #shipping {
+        margin-left: 16rem;
+    }
 
 }

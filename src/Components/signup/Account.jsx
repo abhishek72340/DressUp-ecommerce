@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
 // import { useProduct } from '../../context/product-context';
+import { useToast } from '../../context/toast-context';
 import { useCart } from '../../context/cart-context';
 import { useWishlist } from '../../context/wishlist-cart';
 import { RxAvatar } from 'react-icons/rx'
@@ -14,6 +15,8 @@ export const Account = () => {
     const [placement, setPlacement] = React.useState('right')
     const { setCartItems } = useCart();
     const { setWishlistItem } = useWishlist();
+    const {notifySuccess} =useToast();
+
     // const [userToken, setUserToken] = useState();
     // const [userDetail, setUserDetail] = useState();
 
@@ -23,7 +26,8 @@ export const Account = () => {
         setWishlistItem([])
         setCartItems([])
         navigate('/')
-        onClose(true)
+        onClose(true);
+        notifySuccess('logout successfully')
     }
 
     const navigate = useNavigate();
@@ -61,7 +65,7 @@ export const Account = () => {
                         {!token ? <div><span id='login' onClick={loginRedirectHandler}><span >Login</span> <FiLogIn id='login-icon' /></span>  
                         <span id='logout' onClick={signupRedirectHandler}> <span >Signup</span> <CgLogOut id='logout-icon' /></span></div>:<span id='login' onClick={userLogOut} ><span>Logout</span> <AiOutlineLogout id='login-icon' /></span>}
                 
-                {/* {userDetail?userDetail?.name:'login'} */}
+                {/* {userDetail?userDetail.name:'login'} */}
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

@@ -1,76 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#women-dress-heading{
+#women-dress-heading {
     display: flex;
     justify-content: center;
     font-size: 2.5rem;
     font-family: 'Hammersmith One', sans-serif;
 
 }
-#women-dress-heading-underline-parent{
-    display:flex ;
+
+#women-dress-heading-underline-parent {
+    display: flex;
     justify-content: center;
 }
-#women-dress-heading-underline{
+
+#women-dress-heading-underline {
     width: 15rem;
     height: 1px;
     background-color: lightseagreen;
     margin-top: 1rem;
-   
+
 }
-#women-dress-wallpaper{
+
+#women-dress-wallpaper {
     margin-top: 4rem;
 }
-#women-dressup-choice{
+
+#women-dressup-choice {
     display: flex;
     justify-content: center;
     margin-top: -12px;
 }
 
-#women-dress-product{
+#women-dress-product {
     display: flex;
     justify-content: space-around;
 }
-#women-dress-type{
+
+#women-dress-type {
     font-weight: lighter;
 }
 
-#women-dress-title{
+#women-dress-title {
     width: 13rem;
     height: 5rem;
     font-size: 13px;
     font-weight: bold;
     margin-top: 12px;
 }
-#womendress-price{
+
+#womendress-price {
     font-size: 1.3rem;
     font-weight: lighter;
 }
-#price-add-button{
+
+#price-add-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: -1rem;
 }
-.women-dress-wishlist{
+
+.women-dress-wishlist {
     font-size: 1.3rem;
+    margin-top: 5px;
 }
 
-#women-dress-out-stock{
+#womendress-type-wishlist {
+    display: flex;
+    justify-content: space-between;
+}
+
+#women-dress-out-stock {
     color: red;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     font-weight: lighter;
     margin-top: -1rem;
 
 }
-#women-dress-out-stock-button{
-    position:absolute;
+
+#women-dress-out-stock-button {
+    position: absolute;
     margin-top: -5rem;
     margin-left: 2.5rem;
     width: 10rem;
@@ -83,30 +98,34 @@
 }
 
 /* Desigm for Mobile */
-@media (max-width:480px){
-     #women-dress-product{
+@media (max-width:480px) {
+    #women-dress-product {
         display: flex;
         flex-direction: column;
     }
-    #women-dressup-choice{
+
+    #women-dressup-choice {
         margin-top: -5px;
-    } 
-    #women-dress-title{
-        width: 26rem;
-      
     }
-    #price-add-button{
+
+    #women-dress-title {
+        width: 26rem;
+
+    }
+
+    #price-add-button {
         margin-top: 0;
     }
-    #women-dress-out-stock{
-        margin-top:0;
-    
+
+    #women-dress-out-stock {
+        margin-top: 0;
+
     }
 }
 
 /* Design for Tablet */
-@media(max-width:1024px){
-    #women-dress-product{
+@media(max-width:1024px) {
+    #women-dress-product {
         display: flex;
         flex-direction: column;
     }
@@ -116,23 +135,27 @@
 }
 
 /* Design for Small Tablet */
-@media (max-width:769px){
-    #women-dress-product{
+@media (max-width:769px) {
+    #women-dress-product {
         display: flex;
         flex-direction: column;
     }
-    #women-dressup-choice{
+
+    #women-dressup-choice {
         margin-top: -5px;
-    } 
-    #women-dress-title{
-        width: 26rem;
-      
     }
-    #price-add-button{
+
+    #women-dress-title {
+        width: 26rem;
+
+    }
+
+    #price-add-button {
         margin-top: 0;
     }
-    #women-dress-out-stock{
-        margin-top:0;
-    
+
+    #women-dress-out-stock {
+        margin-top: 0;
+
     }
 }

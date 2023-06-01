@@ -1,11 +1,14 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useToast } from "./toast-context";
 const cartContext = createContext();
 
 const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const navigate = useNavigate();
+
+const {notifySuccess,notifyError} =useToast();
 
     const token = localStorage.getItem("token");
     const addToCart = async (product) => {
@@ -13,12 +16,14 @@ const CartProvider = ({ children }) => {
             const { data } = await axios.post('/api/user/cart',
                 { product }, { headers: { authorization: token } }
             )
-            setCartItems(data.cart)
-            console.log(data)
+            setCartItems(data.cart);
+           notifySuccess("Added Item Successfully");
+
         }
         catch (error) {
             navigate('/login')
-            window.scrollTo({ top: 0, scroll: 'instant' })
+            window.scrollTo({ top: 0, scroll: 'instant' });
+            notifyError('please login')
         }
     }
 
@@ -28,6 +33,7 @@ const CartProvider = ({ children }) => {
                 { headers: { authorization: token } }
             )
             setCartItems(data.cart)
+            notifyError('Item Deleted') 
         }
         catch (error) {
             alert(error)

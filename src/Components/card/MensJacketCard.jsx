@@ -34,8 +34,20 @@ export const MensJacketCard = ({ jacket }) => {
             />
             {jacket.stock ? true : <p id='out-of-stock-button'>out of stock</p>}
           </Box>
-          <p id='jacket-type'> {jacket.type}</p>
-          <p id='jacket-title'>{jacket.title}</p>
+
+          <div id='jacket-type-wishlist'>
+          <p id='jacket-type'> {jacket.type}</p>          
+          {
+            wishlistItem.find(item => item._id === jacket._id) ? <AiFillHeart className='jacket-wishlist' onClick={() => navigate('/wishlist')} /> :
+              <span>
+                {
+                  jacket.stock ? <span onClick={() => { addToWishlist(jacket) }} ><AiOutlineHeart className='jacket-wishlist' /></span> : null
+                }
+              </span>
+          }
+          </div>
+
+          <p id='jacket-title'>{jacket.title}</p>     
 
           {
             cartItems.find(cartItem => cartItem._id === jacket._id) ?
@@ -62,16 +74,7 @@ export const MensJacketCard = ({ jacket }) => {
                   </Stack> : <p id='jacket-out-stock'>Out Of Stock</p>
                 }
               </div>
-          }
-
-          {
-            wishlistItem.find(item => item._id === jacket._id) ? <AiFillHeart className='jacket-wishlist' onClick={() => navigate('/wishlist')} /> :
-              <span>
-                {
-                  jacket.stock ? <span onClick={() => { addToWishlist(jacket) }} ><AiOutlineHeart className='jacket-wishlist' /></span> : null
-                }
-              </span>
-          }
+          }       
         </Box>
       </Center>
     </div>
