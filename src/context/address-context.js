@@ -15,7 +15,7 @@ const AddressProvider = ({ children }) => {
         street: '',
         state: '',
         country: '',
-        isAddressSelected: true
+        isAddressSelected: false
     });
     const navigate = useNavigate();
     const editAddress = (index) => {
