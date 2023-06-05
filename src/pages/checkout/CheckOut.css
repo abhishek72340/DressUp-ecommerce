@@ -5,10 +5,12 @@
 }
 
 #check-out {
-    height: 65vh;
+    height: 70vh;
     width: 27vw;
     border: 1px solid lightseagreen;
+    box-shadow: 1px 1px 10px lightgray;
     margin-right: 2rem;
+    
 }
 
 

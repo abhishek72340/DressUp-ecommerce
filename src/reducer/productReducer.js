@@ -8,6 +8,8 @@ export const productReducer = (state, action) => {
 
         case 'SORT':
             return { ...state, sortBy: action.payload }
+
+        
         default:
             return state
     }

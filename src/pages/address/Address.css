@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#price-detail-text {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#check-out-box {
+    margin-top: 2rem;
+}
+
+#checkout-product-details {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#check-out-address {
+    height: 110vh;
+    width: 30vw;
+    border: 1px solid lightseagreen;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    box-shadow: 1px 1px 10px lightgray;
+}
+
+#checkout-data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#cart-subtotal {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+#checkout-title {
+    width: 10rem;
+    height: 4rem;
+    font-size: 14px;
+}
+
+#subtotal-ammount {
+    font-weight: lighter;
+
+}
+
+#input-address {
+    font-weight: lighter;
+}
+
+#shipping-cart-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+#horizontal-line {
+    height: 1px;
+    background-color: lightseagreen;
+    width: 20vw;
+    margin-top: 4rem;
+}
+
+#line {
+    display: flex;
+    justify-content: center;
+}
+
+#total {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    margin-left: -1.5rem;
+}
+
+#total-ammount {
+    font-weight: lighter;
+    font-size: 1.4rem;
+}
+
+#place-order-button {
+    width: 22vw;
+    height: 2rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightseagreen;
+    font-weight: 500;
+    word-spacing: 5px;
+    cursor: pointer;
+}
+
+#check-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: white;
+}
+
+/* Address-data */
+#checkout-address-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 3rem;
+    margin-top: -5rem;
+}
+
+.edit-address-button {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid lightseagreen;
+}
+
+.delete-address-button {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid red;
+
+}
+
+#address-input-data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+#address-input-data p {
+    width: 30vw;
+}
+
+.updated-address-button {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+
+}
+
+#address-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+#address-heading {
+    align-self: flex-start;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 4rem;
+    text-decoration: underline;
+
+}
+
+#add-new-address-button {
+    width: 7rem;
+    height: 1.9rem;
+    align-self: flex-start;
+    background-color: lightseagreen;
+    border: 1px solid lightseagreen;
+    color: white;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.address-data {
+    box-shadow: 1px 1px 10px lightgray;
+    border: 1px solid lightseagreen;
+    margin: 2rem;
+
+
+}
+
+.edit-address-button {
+    margin-left: 1rem;
+}
+
+.delete-address-button {
+    margin-left: 1rem;
+
+}
+
+/* Design for Mobile */
+@media(max-width:480px) {
+    #check-out-address {
+        height: 40vh;
+        width: 60vw;
+        border: 1px solid white;
+        border: 1px solid lightseagreen;
+        margin-top: -1rem;
+    }
+
+    #shipping-cart-product {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2rem;
+
+
+    }
+
+    #subtotal-ammount {
+        font-size: 1.3rem;
+    }
+
+    #checkout-title {
+        width: 20rem;
+        height: 4rem;
+        font-size: 11px;
+    }
+
+    #check-out-box {
+        margin-right: 2rem;
+    }
+
+    #horizontal-line {
+
+        width: 55vw;
+        margin-top: 3rem;
+    }
+
+    #place-order-button {
+        width: 35vw;
+        height: 2.5rem;
+        font-size: 10px;
+        background-color: lightseagreen;
+        font-weight: 0px;
+        word-spacing: 0px;
+    }
+
+    #check-btn {
+        margin-top: 2.5rem;
+
+    }
+
+}
+
+/* Design for Tablet */
+@media (max-width:1024px) {
+    #check-out-address {
+        height: 50vh;
+        width: 50vw;
+        margin-top: 0rem;
+    }
+
+    #change-address {
+        margin-right: 5rem;
+        font-weight: lighter;
+        font-size: 12px;
+        margin-top: -1.5rem;
+    }
+
+    #checkout-address-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    #place-order-button {
+        width: 20vw;
+        height: 2rem;
+        font-size: 10px;
+        background-color: lightseagreen;
+        font-weight: 0px;
+        word-spacing: 0px;
+        margin-top: -10px;
+    }
+
+    #cart-subtotal {
+        margin-left: -2rem;
+    }
+
+    #horizontal-line {
+
+        width: 40vw;
+        margin-top: 5rem;
+    }
+
+    #shipping-cart-product {
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    #shipping-to {
+        font-weight: lighter;
+    }
+
+}
+
+/* Design for small Tablet */
+@media (max-width:769px) {
+    #check-out {
+        height: 25vh;
+        width: 50vw;
+        border: 1px solid lightseagreen;
+    }
+
+    #check-out-address {
+        height: 40vh;
+        width: 60vw;
+        border: 1px solid white;
+        border: 1px solid lightseagreen;
+        margin-top: -1rem;
+    }
+
+    #checkout-address-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        gap: 5rem;
+        flex-direction: column;
+    }
+
+    #check-out-box {
+        margin-right: 2rem;
+    }
+
+    #change-address {
+        font-size: 10px;
+    }
+
+    #horizontal-line {
+
+        width: 80vw;
+        margin-top: 2.5rem;
+    }
+
+    #place-order-button {
+        width: 35vw;
+        height: 2.5rem;
+        font-size: 10px;
+        background-color: lightseagreen;
+        font-weight: 0px;
+        word-spacing: 0px;
+    }
+
+    #check-btn {
+        margin-top: 2.5rem;
+
+    }
+
+}

@@ -3,7 +3,6 @@ import './SearchBar.css'
 import { useProduct } from '../../context/product-context';
 import { useNavigate } from 'react-router-dom';
 import { BiSearch } from 'react-icons/bi';
-import { CiSearch } from 'react-icons/ci';
 import { Drawer, RadioGroup, DrawerBody, DrawerHeader, DrawerContent, DrawerOverlay, useDisclosure, } from '@chakra-ui/react'
 export const SearchBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -40,7 +39,6 @@ export const SearchBar = () => {
           <DrawerBody >
             <span id='search-field'>
               <input type="search" placeholder='Search for:' id='search-input' value={searchProduct} onChange={searchProductField} onKeyDown={handleKeyDown} />
-              <CiSearch id='top-bar-search-icon' />
             </span>
           </DrawerBody>
           <div id='search-product-data-container'>

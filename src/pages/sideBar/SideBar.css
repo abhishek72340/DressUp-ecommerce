@@ -29,7 +29,19 @@
 #side-signup {
     margin-left: 1.3rem;
 }
-
+.sidebar-account-address{
+    display: flex;
+    gap:1.5rem;
+    margin-top: 1rem;
+    margin-left: 2.2rem;
+}
+.sidebar-account-address:hover{
+    background-color: lightseagreen;
+    color:white;
+}
+#sidebar-address-icon{
+    margin-top: 3px;
+}
 @media (max-width:480px) {
     #menu-bar {
         display: block;

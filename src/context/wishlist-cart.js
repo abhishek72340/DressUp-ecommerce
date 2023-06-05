@@ -6,7 +6,8 @@ const wishlistContext = createContext();
 const WishlistProvider = ({ children }) => {
     const [wishlistItem, setWishlistItem] = useState([]);
     const {notifySuccess,notifyError} =useToast();
-
+    
+    //add to wishlist API//
     const addToWishlist = async (product) => {
         const token = localStorage.getItem("token");
         try {
@@ -20,6 +21,8 @@ const WishlistProvider = ({ children }) => {
             alert(error)
         }       
     };
+
+    //Remove to wishlist API//
     const removeJacketWishlist = async (id) => {
         const token = localStorage.getItem("token");
         try {

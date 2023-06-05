@@ -90,7 +90,6 @@
 #login:hover {
     background-color: lightseagreen;
     color: white;
-
 }
 
 #login-icon {
@@ -113,6 +112,31 @@
     margin-top: 5px;
 }
 
+.account-address {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    gap: 10px
+}
+
+.account-address:hover {
+    background-color: lightseagreen;
+    color: white;
+}
+
+#address-icon {
+    margin-top: 6px;
+    margin-left: 0.3rem;
+}
+
+#address-profile-icon {
+    margin-top: 6px;
+    margin-left: 1.4rem;
+}
+
+#address-order-icon {
+    margin-top: 6px;
+}
 
 /* Design For Mobile*/
 @media (max-width:480px) {

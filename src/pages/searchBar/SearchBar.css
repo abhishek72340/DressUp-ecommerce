@@ -34,11 +34,6 @@
 
 }
 
-#top-bar-search-icon {
-    font-size: 1.3rem;
-    margin-top: 5px;
-    margin-left: -1.4rem;
-}
 
 #searchicon-of-navbar {
     cursor: pointer;
@@ -55,10 +50,6 @@
     margin-left: 2rem;
 }
 
-::-webkit-scrollbar {
-    width:1px ;
-   
-}
 
 #search-single-product-title {
     width: 7rem;

@@ -1,12 +1,9 @@
-// import React,{useState} from 'react';
-
+import wallpaper from '../../images/wallpaper.webp'
 export const Wallpaper = () => {
-  
-
-  return (
+    return (
     <div>
 
-<img src="/images/wallpaper.webp" alt="wallpaper"  />
+<img src={wallpaper} alt="wallpaper" />
 <div  style={{display:'flex',justifyContent:'center',alignItems:'center',backgroundColor:'white',height:'3rem'}}>BUY ONLINE & PICK UP IN STORE select “store pick up” at checkout + pick up same day!</div>
 
 

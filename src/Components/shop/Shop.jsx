@@ -3,6 +3,7 @@ import { useProduct } from '../../context/product-context';
 import { getSortedProducts } from '../../utils/FilterUtils';
 import { FilterCard } from '../card/FilterCard';
 import { ShopCard } from '../card/ShopCard';
+import shop from '../../images/shop.jpg';
 export const Shop = () => {
   const { products, sortBy, dispatch } = useProduct();
 
@@ -13,7 +14,7 @@ export const Shop = () => {
   return (
     <div >
       <span id='shop-banner'>
-        <img src="/images/shop.jpg" alt="shop" />
+        <img src={shop} alt="shop" />
       </span>
       <nav id='shop-link'>
         <span id='link'>

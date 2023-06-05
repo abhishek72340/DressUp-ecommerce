@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/cart-context';
 import { useWishlist } from '../../context/wishlist-cart';
@@ -11,73 +11,99 @@ import {
   Button,
   Stack
 } from '@chakra-ui/react';
-export const ShopCard = ({allproduct}) => {
-    const [disable,setDisable]=useState(false);
-    const { addToCart, cartItems, goToCartHandler } = useCart();
-    const { addToWishlist, wishlistItem } = useWishlist();
-    const navigate = useNavigate();
+export const ShopCard = ({ allproduct }) => {
+  const [toggle, setToggle] = useState(true)
+  const [disable, setDisable] = useState(false);
+  const { addToCart, cartItems, goToCartHandler } = useCart();
+  const { addToWishlist, wishlistItem } = useWishlist();
+  const navigate = useNavigate();
 
+  const shopMouseOver = () => {
+    setToggle(false)
+
+  };
+  const shopMouseOut = () => {
+    setToggle(true)
+  }
   return (
     <div key={allproduct._id}>
-                  <Center py={20}>
-                    <Box>
-                      <Box  >
-                        <Image
-                          height={400}
-                          width={250}
-                          objectFit={'cover'}
-                          src={allproduct.imgOne}
-                          id='shop-image'
-                          onClick={() => {
-                            navigate(`/singleproduct/${allproduct._id}`)
-                            window.scrollTo({ top: 0, scroll: 'instant' })
-                          }}
-                        />
-                      </Box>
-                      {allproduct.stock ? null : <p id='bestselling-out-stock-button'>Out Of Stock</p>}
-                      
-                      <div className='shop-type-wishlist'>
-                      <span id='bestselling-type'>{allproduct.type}</span>
-                      {
-                      wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> :
-                       <span onClick={() => addToWishlist(allproduct)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>
-                       }
-                       </div>
-                      <p id='besselling-title'>{allproduct.title}</p>
+      <Center py={20}>
+        <Box>
+          <Box  >
+            {
+              toggle ?
+                <Image
+                  height={400}
+                  width={250}
+                  objectFit={'cover'}
+                  onMouseOver={shopMouseOver}
+                  src={allproduct.imgOne}
+                  id='shop-image'
+                  onClick={() => {
+                    navigate(`/singleproduct/${allproduct._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                /> :
+                <Image
+                  height={400}
+                  width={250}
+                  objectFit={'cover'}
+                  onMouseOut={shopMouseOut}
+                  src={allproduct.imgTwo}
+                  id='shop-image'
+                  onClick={() => {
+                    navigate(`/singleproduct/${allproduct._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                />
+            }
 
-                      {
-                      cartItems.find(item => item._id === allproduct._id) ?
 
-                        <div>
-                            {
-                            allproduct.stock ? <div id='bestselling-price-add-button'>
-                          <span id='bestselling-price'>${allproduct.price}.00</span>
-                          <Stack direction='row' spacing={4} align='center' >
-                            <Button colorScheme='teal' variant='outline' onClick={goToCartHandler}>Go To Cart</Button>
-                          </Stack>
-                        </div> : null
-                        }
-                          {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}
-                          </div>:
-                           <div>
-                            {
-                            allproduct.stock ? <div id='bestselling-price-add-button'>
-                          <span id='bestselling-price'>${allproduct.price}.00</span>
+          </Box>
+          {allproduct.stock ? null : <p id='bestselling-out-stock-button'>Out Of Stock</p>}
 
-                          <Stack direction='row' spacing={4} align='center' >
-                            <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
-                              addToCart(allproduct)
-                              setDisable(true)
-                            }}>Add To Cart</Button> </Stack>
+          <div className='shop-type-wishlist'>
+            <span id='bestselling-type'>{allproduct.type}</span>
+            {
+              wishlistItem.find(item => item._id === allproduct._id) ? <AiFillHeart className='bestselling-dress-wishlist' onClick={() => navigate('/wishlist')} /> :
+                <span onClick={() => addToWishlist(allproduct)}>{allproduct.stock ? <AiOutlineHeart className='bestselling-dress-wishlist' /> : null}</span>
+            }
+          </div>
+          <p id='besselling-title'>{allproduct.title}</p>
 
-                        </div> : null
-                        }
-                          {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}
-                          </div>
-                          }                     
-                    </Box>
-                  </Center>
+          {
+            cartItems.find(item => item._id === allproduct._id) ?
 
-                </div>
+              <div>
+                {
+                  allproduct.stock ? <div id='bestselling-price-add-button'>
+                    <span id='bestselling-price'>${allproduct.price}.00</span>
+                    <Stack direction='row' spacing={4} align='center' >
+                      <Button colorScheme='teal' variant='outline' onClick={goToCartHandler}>Go To Cart</Button>
+                    </Stack>
+                  </div> : null
+                }
+                {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}
+              </div> :
+              <div>
+                {
+                  allproduct.stock ? <div id='bestselling-price-add-button'>
+                    <span id='bestselling-price'>${allproduct.price}.00</span>
+
+                    <Stack direction='row' spacing={4} align='center' >
+                      <Button isDisabled={disable} colorScheme='teal' variant='outline' onClick={() => {
+                        addToCart(allproduct)
+                        setDisable(true)
+                      }}>Add To Cart</Button> </Stack>
+
+                  </div> : null
+                }
+                {allproduct.stock ? null : <p id='bestselling-out-stock'>Out Of Stock</p>}
+              </div>
+          }
+        </Box>
+      </Center>
+
+    </div>
   )
 }

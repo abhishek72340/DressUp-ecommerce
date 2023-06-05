@@ -12,42 +12,67 @@ import {
   Stack
 } from '@chakra-ui/react';
 export const MensJacketCard = ({ jacket }) => {
+  const [toggle, setToggle] = useState(true)
   const [disable, setDisable] = useState(false);
   const { addToCart, cartItems, goToCartHandler } = useCart();
   const { addToWishlist, wishlistItem } = useWishlist();
   const navigate = useNavigate();
+
+  const jacketMouseOver = () => {
+    setToggle(false)
+
+  };
+  const jacketMouseOut = () => {
+    setToggle(true)
+  }
 
   return (
     <div key={jacket._id}>
       <Center py={20}>
         <Box>
           <Box>
-            <Image
-              height={400}
-              width={237}
-              objectFit={'cover'}
-              src={jacket.imgOne}
-              onClick={() => {
-                navigate(`/singleproduct/${jacket._id}`)
-                window.scrollTo({ top: 0, scroll: 'instant' })
-              }}
-            />
+
+            {
+              toggle ? <Image
+                height={400}
+                width={237}
+                objectFit={'cover'}
+                onMouseOver={jacketMouseOver}
+                src={jacket.imgOne}
+                onClick={() => {
+                  navigate(`/singleproduct/${jacket._id}`)
+                  window.scrollTo({ top: 0, scroll: 'instant' })
+                }}
+              /> :
+                <Image
+                  height={400}
+                  width={237}
+                  objectFit={'cover'}
+                  onMouseOut={jacketMouseOut}
+                  src={jacket.imgTwo}
+                  onClick={() => {
+                    navigate(`/singleproduct/${jacket._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                />
+            }
+
             {jacket.stock ? true : <p id='out-of-stock-button'>out of stock</p>}
           </Box>
 
           <div id='jacket-type-wishlist'>
-          <p id='jacket-type'> {jacket.type}</p>          
-          {
-            wishlistItem.find(item => item._id === jacket._id) ? <AiFillHeart className='jacket-wishlist' onClick={() => navigate('/wishlist')} /> :
-              <span>
-                {
-                  jacket.stock ? <span onClick={() => { addToWishlist(jacket) }} ><AiOutlineHeart className='jacket-wishlist' /></span> : null
-                }
-              </span>
-          }
+            <p id='jacket-type'> {jacket.type}</p>
+            {
+              wishlistItem.find(item => item._id === jacket._id) ? <AiFillHeart className='jacket-wishlist' onClick={() => navigate('/wishlist')} /> :
+                <span>
+                  {
+                    jacket.stock ? <span onClick={() => { addToWishlist(jacket) }} ><AiOutlineHeart className='jacket-wishlist' /></span> : null
+                  }
+                </span>
+            }
           </div>
 
-          <p id='jacket-title'>{jacket.title}</p>     
+          <p id='jacket-title'>{jacket.title}</p>
 
           {
             cartItems.find(cartItem => cartItem._id === jacket._id) ?
@@ -74,7 +99,7 @@ export const MensJacketCard = ({ jacket }) => {
                   </Stack> : <p id='jacket-out-stock'>Out Of Stock</p>
                 }
               </div>
-          }       
+          }
         </Box>
       </Center>
     </div>

@@ -12,26 +12,52 @@ import {
   Stack
 } from '@chakra-ui/react';
 export const WomendressCard = ({ womendress }) => {
+  const [toggle, setToggle] = useState(true)
   const [disable, setDisable] = useState(false);
   const { addToCart, cartItems, goToCartHandler } = useCart();
   const { addToWishlist, wishlistItem } = useWishlist();
   const navigate = useNavigate();
+
+  const womenMouseOver = () => {
+    setToggle(false)
+
+  };
+  const womenMouseOut = () => {
+    setToggle(true)
+  }
   return (
     <div key={womendress._id}>
       <Center py={20}>
         <Box>
           <Box >
-            <Image
-              height={400}
-              width={270}
-              objectFit={'cover'}
-              src={womendress.imgOne}
-              id='women-dress-image'
-              onClick={() => {
-                navigate(`/singleproduct/${womendress._id}`)
-                window.scrollTo({ top: 0, scroll: 'instant' })
-              }}
-            />
+            {
+              toggle ?
+                <Image
+                  height={400}
+                  width={270}
+                  objectFit={'cover'}
+                  onMouseOver={womenMouseOver}
+                  src={womendress.imgOne}
+                  id='women-dress-image'
+                  onClick={() => {
+                    navigate(`/singleproduct/${womendress._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                /> :
+                <Image
+                  height={400}
+                  width={270}
+                  objectFit={'cover'}
+                  onMouseOut={womenMouseOut}
+                  src={womendress.imgTwo}
+                  id='women-dress-image'
+                  onClick={() => {
+                    navigate(`/singleproduct/${womendress._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                />
+            }
+
           </Box>
           <p>{womendress.stock ? null : <p id='women-dress-out-stock-button'>Out Of Stock</p>}</p>
 

@@ -9,6 +9,7 @@ import { ProductProvider } from "./context/product-context";
 import { CartProvider } from './context/cart-context';
 import { WishlistProvider } from "./context/wishlist-cart";
 import { ToastProvider } from './context/toast-context';
+import { AddressProvider } from './context/address-context';
 // Call make Server
 makeServer();
 
@@ -18,11 +19,13 @@ ReactDOM.render(
       <ToastProvider>
         <ProductProvider>
           <CartProvider>
-            <WishlistProvider>
-              <ChakraProvider>
-                <App />
-              </ChakraProvider>
-            </WishlistProvider>
+            <AddressProvider>
+              <WishlistProvider>
+                <ChakraProvider>
+                  <App />
+                </ChakraProvider>
+              </WishlistProvider>
+            </AddressProvider>
           </CartProvider>
         </ProductProvider>
       </ToastProvider>

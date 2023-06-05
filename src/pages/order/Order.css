@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#empty-order-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+#order-history-statement {
+    font-size: 1.2rem;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+#empty-order-history button {
+    width: 7rem;
+    height: 2rem;
+    border: 1px solid lightseagreen;
+}
+
+/* Order-Data */
+#order-data{
+    border: 1px solid lightseagreen;
+    box-shadow: 1px 1px 10px gray;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.order-key{
+    font-size: 1.1rem;
+    font-family: 'Hammersmith One', sans-serif;
+}
+.order-value{
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+#order-history-data{
+    display: flex;
+    justify-content: center;
+margin-top: 3rem;
+}
+#order-heading{
+    font-size: 2rem;
+    font-family: 'Hammersmith One', sans-serif;
+    text-decoration: underline;
+    color: lightseagreen;
+
+}

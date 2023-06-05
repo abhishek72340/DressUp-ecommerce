@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.addressmodal-input-field{
+    width: 30vw;
+    height: 2rem;
+    border: 1px solid black;
+}
+.addressmodal-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    
+}
+#addressmodal-button{
+    width: 30vw;
+    height: 2rem;
+    background-color: lightseagreen;
+    color: white;
+}
+.addres-modal-data{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+#address-modal-button{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.address-modal-edit-button{
+width: 4rem;
+height: 2rem;
+background-color:lightseagreen;
+color: white;
+}
+.address-modal-delete-button{
+width: 4rem;
+height: 2rem;
+background-color: red;
+color: white;
+
+}

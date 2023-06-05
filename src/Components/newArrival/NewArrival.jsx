@@ -10,7 +10,7 @@ import {
 
 export const NewArrival = () => {
   const navigate = useNavigate();
-  const { dispatch, state } = useProduct();
+  const { state } = useProduct();
   const { products } = state;
   const newArrivalHandle = () => {
     navigate('/shop');

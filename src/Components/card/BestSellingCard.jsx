@@ -12,25 +12,53 @@ import {
   Stack
 } from '@chakra-ui/react';
 export const BestSellingCard = ({ bestselling }) => {
+  const [toggle, setToggle] = useState(true)
   const [disable, setDisable] = useState(false);
   const { addToCart, cartItems, goToCartHandler } = useCart();
   const { addToWishlist, wishlistItem } = useWishlist();
   const navigate = useNavigate();
+
+  const bestsellingMouseOver = () => {
+    setToggle(false)
+
+  };
+  const bestsellingMouseOut = () => {
+    setToggle(true)
+  }
+
   return (
     <div key={bestselling._id}>
       <Center py={20}>
         <Box>
           <Box >
-            <Image
-              height={400}
-              width={270}
-              objectFit={'cover'}
-              src={bestselling.imgOne}
-              onClick={() => {
-                navigate(`/singleproduct/${bestselling._id}`)
-                window.scrollTo({ top: 0, scroll: 'instant' })
-              }}
-            />
+
+            {
+              toggle ?
+                <Image
+                  height={400}
+                  width={270}
+                  objectFit={'cover'}
+                  onMouseOver={bestsellingMouseOver}
+                  src={bestselling.imgOne}
+                  onClick={() => {
+                    navigate(`/singleproduct/${bestselling._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                /> :
+                <Image
+                  height={400}
+                  width={270}
+                  objectFit={'cover'}
+                  onMouseOut={bestsellingMouseOut}
+                  src={bestselling.imgTwo}
+                  onClick={() => {
+                    navigate(`/singleproduct/${bestselling._id}`)
+                    window.scrollTo({ top: 0, scroll: 'instant' })
+                  }}
+                />
+            }
+
+
           </Box>
           {bestselling.stock ? null : <p id='bestselling-out-stock-button'>Out Of Stock</p>}
           <div id='bestselling-type-wishlist'>

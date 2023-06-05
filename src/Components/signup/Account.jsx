@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 import './Signup.css';
 import { useNavigate } from 'react-router-dom';
-// import { useProduct } from '../../context/product-context';
 import { useToast } from '../../context/toast-context';
 import { useCart } from '../../context/cart-context';
 import { useWishlist } from '../../context/wishlist-cart';
@@ -10,16 +9,16 @@ import { Drawer, RadioGroup, DrawerBody, DrawerHeader, DrawerContent, DrawerOver
 import { FiLogIn } from 'react-icons/fi';
 import { CgLogOut } from 'react-icons/cg';
 import { AiOutlineLogout } from 'react-icons/ai';
+import { FaRegAddressCard } from 'react-icons/fa';
+import { ImProfile } from 'react-icons/im';
+import { BsBagCheckFill } from 'react-icons/bs';
+
 export const Account = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('right')
     const { setCartItems } = useCart();
     const { setWishlistItem } = useWishlist();
-    const {notifySuccess} =useToast();
-
-    // const [userToken, setUserToken] = useState();
-    // const [userDetail, setUserDetail] = useState();
-
+    const { notifySuccess } = useToast();
     const token = localStorage.getItem('token')
     const userLogOut = () => {
         localStorage.removeItem('token')
@@ -39,15 +38,19 @@ export const Account = () => {
         navigate('/signup')
         onClose(true)
     };
+    const addressHandler = () => {
+        navigate('/addressmodal')
+        onClose(true)
+    }
+    const profileHandler = () => {
+        navigate('/profile')
+        onClose(true)
+    }
+    const orderHandler = () => {
+        navigate('/order')
+        onClose(true)
+    }
 
-    // useEffect(() => {
-    //     let token = localStorage.getItem("token");
-    //     if (token) {
-    //         setUserToken(token);
-    //         setUserDetail(JSON.parse(localStorage.getItem("foundUser")));
-
-    //     }
-    // }, [userToken]);
     return (
         <div>
             <RadioGroup defaultValue={placement} onChange={setPlacement}>
@@ -61,11 +64,13 @@ export const Account = () => {
                 <DrawerContent>
                     <DrawerHeader borderBottomWidth='1px'>Account</DrawerHeader>
                     <DrawerBody id='login-logout'>
-                        
-                        {!token ? <div><span id='login' onClick={loginRedirectHandler}><span >Login</span> <FiLogIn id='login-icon' /></span>  
-                        <span id='logout' onClick={signupRedirectHandler}> <span >Signup</span> <CgLogOut id='logout-icon' /></span></div>:<span id='login' onClick={userLogOut} ><span>Logout</span> <AiOutlineLogout id='login-icon' /></span>}
-                
-                {/* {userDetail?userDetail.name:'login'} */}
+
+                        {!token ? <div><span id='login' onClick={loginRedirectHandler}><span >Login</span> <FiLogIn id='login-icon' /></span>
+                            <span id='logout' onClick={signupRedirectHandler}> <span >Signup</span> <CgLogOut id='logout-icon' /></span></div> : <span id='login' onClick={userLogOut} ><span>Logout</span> <AiOutlineLogout id='login-icon' /></span>}
+
+                        <div className='account-address' onClick={addressHandler}><span >Address</span><span id='address-icon'><FaRegAddressCard /></span></div>
+                        <div className='account-address' onClick={profileHandler}><span >Profile</span><span id='address-profile-icon'><ImProfile /></span></div>
+                        <div className='account-address' onClick={orderHandler}><span >My Order</span><span id='address-order-icon'><BsBagCheckFill /></span></div>
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>

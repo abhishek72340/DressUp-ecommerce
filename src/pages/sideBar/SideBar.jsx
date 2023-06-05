@@ -8,7 +8,10 @@ import { BiSearch } from 'react-icons/bi';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { FiLogIn } from 'react-icons/fi';
 import { AiOutlineLogout } from 'react-icons/ai';
+import { ImProfile } from 'react-icons/im';
 import { Drawer, RadioGroup, DrawerBody, DrawerHeader, DrawerContent, DrawerOverlay, useDisclosure, } from '@chakra-ui/react'
+import { FaRegAddressCard } from 'react-icons/fa';
+import { BsBagCheckFill } from 'react-icons/bs';
 
 export const SideBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -61,6 +64,18 @@ export const SideBar = () => {
     if (e.key === ' ') {
       e.preventDefault();
     }
+  };
+  const addressHandler = () => {
+    navigate('/addressmodal')
+    onClose(true)
+  }
+  const ProfileHandler = () => {
+    navigate('/profile')
+    onClose(true)
+  }
+  const orderHandler = () => {
+    navigate('/order')
+    onClose(true)
   }
   return (
     <div>
@@ -74,6 +89,10 @@ export const SideBar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth='1px'>Search Product</DrawerHeader>
+          <div className='sidebar-account-address' onClick={addressHandler}><span >Profile</span><span id='sidebar-address-icon'><ImProfile /></span></div>
+          <div className='sidebar-account-address' onClick={ProfileHandler}><span >Address</span><span id='sidebar-address-icon'><FaRegAddressCard /></span></div>
+          <div className='sidebar-account-address' onClick={orderHandler}><span >My Order</span><span id='sidebar-address-icon'><BsBagCheckFill /></span></div>
+         
           <div id='side-signup'> {!token ? <p id='login'><span onClick={sidebarLoginRedirect} >Login</span>/<span onClick={sidebarSignupRedirect}>Signup</span> <FiLogIn id='login-icon' /> </p> : <span id='login' onClick={userLogOut} ><span style={{ marginTop: '4px' }}>Logout</span> <AiOutlineLogout id='login-icon' /></span>}</div>
           <DrawerBody >
 

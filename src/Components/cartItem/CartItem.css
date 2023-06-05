@@ -83,9 +83,8 @@
 /* *CHECK-OUT STYLE */
 #checkout-component {
     position: fixed;
-    top: 40%;
+    top: 30%;
     right: 0;
-
 }
 
 /* Design for Mobile */
@@ -99,23 +98,37 @@
         font-size: 1.2rem;
         margin-top: 4rem;
         margin-left: 2rem;
+        display: flex;
+        gap: 4rem;
+      
     }
 
     #cart-data {
-        margin-left: 10rem;
-        margin-top: -9rem;
+        margin-left: 25rem;
+        margin-top: 7rem;
+        position: absolute;
+        font-size: 1.4rem;
+
     }
 
     #cart-product-name {
+        position: absolute;
         width: 7rem;
         height: 7rem;
-        margin-left: 4rem;
-        margin-top: -1rem;
+        margin-left: 16rem;
+        margin-top: 7rem;
     }
 
     #cart-heading {
         margin-top: 4rem;
     }
+    #checkout-component {
+        position:static;
+      display: flex;
+      justify-content: flex-end;
+        
+    }
+      
 }
 
 /* Design For Tablet */
@@ -125,6 +138,12 @@
         height: 8rem;
         margin-left: -2rem;
         margin-top: 2em;
+    }
+    #checkout-component {
+        position:static;
+      display: flex;
+      justify-content: flex-end;
+        
     }
 }
 
@@ -145,17 +164,19 @@
     }
 
     #cart-data {
-
-        margin-left: 10rem;
-        margin-top: -9rem;
+        margin-left: 25rem;
+        margin-top: 7rem;
+        position: absolute;
+        font-size: 1.4rem;
 
     }
 
     #cart-product-name {
+        position: absolute;
         width: 7rem;
         height: 7rem;
-        margin-left: 4rem;
-        margin-top: -1rem;
+        margin-left: 16rem;
+        margin-top: 7rem;
     }
 
     #cart-heading {
