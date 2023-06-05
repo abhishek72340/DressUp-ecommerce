@@ -51,9 +51,6 @@ const [userDetails,setUserDetails] = useState({
                 <span id='remember-me'><input type="checkbox" />Remember Me</span>
                 <span id='forget-password' onClick={() => navigate('/forgotpassword')}>Forget Your Password</span>
             </div>
-
-            {/* {userDetails?userDetails.email:'login'} */}
-
             <Module />
         </div>
     )
