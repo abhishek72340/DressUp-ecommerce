@@ -25,7 +25,7 @@ export const AddressModal = () => {
                         className='addressmodal-input-field'
                     />
                     <input
-                        type="text"
+                        type="number"
                         name="mobile"
                         value={formData.mobile}
                         onChange={handleInputChange}
