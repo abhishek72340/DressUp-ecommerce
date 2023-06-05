@@ -4,7 +4,7 @@ import { Spinner } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import { Module } from '../../module/Module';
 import axios from 'axios';
-import SingleProductCard from '../card/SingleProductCard';
+import SingleProductCard from '../../Components/card/SingleProductCard';
 import singleproductimage from '../../images/singleproductimage.gif'
 export const SingleProduct = () => {
   const [productData, setProductData] = useState([]);

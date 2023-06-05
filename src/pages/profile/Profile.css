@@ -1,32 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#profile-data{
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 3rem;
+
+#profile-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
-#please-login{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 2rem;
+
+#please-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
-#profile-login-button{
+
+#profile-login-button {
     width: 7rem;
     height: 2rem;
-    background-color: lightseagreen;
-    color: white;
+    border: 1px solid lightseagreen;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-#profile-statement{
+
+#profile-statement {
     font-size: 1.1rem;
     font-family: 'Hammersmith One', sans-serif;
 

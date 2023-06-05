@@ -10,12 +10,32 @@ import {
 
 export const NewArrival = () => {
   const navigate = useNavigate();
-  const { state } = useProduct();
-  const { products } = state;
-  const newArrivalHandle = () => {
+  const { dispatch } = useProduct();
+
+  const womenDressCategory = () => {
+    dispatch({ type: 'SORT', payload: 'WOMEN' })
     navigate('/shop');
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
+  const menJacketCategory = () => {
+    dispatch({ type: 'SORT', payload: 'MEN' })
+    navigate('/shop');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  };
+  const menShirtCategory = () => {
+    dispatch({ type: 'SORT', payload: 'MEN' })
+    navigate('/shop');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  };
+  const shoesCategory = () => {
+    dispatch({ type: 'SORT', payload: 'SHOES' })
+    navigate('/shop');
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  };
+
   return (
     <div>
       <span id='new-arrival'>New Arrivel</span>
@@ -26,30 +46,61 @@ export const NewArrival = () => {
         <p className='women-dress'>WOMEN'S DRESS</p>
         <p className='men-jacket'>MEN'S JACKET</p>
         <p className='men-shirt'>MEN'S  SHIRT</p>
-        <p className='clothing'>CLOTHING</p>
+        <p className='clothing' >CLOTHING</p>
       </div>
       <div id='new-arrival-product'>
-        {
-          products.slice(5, -6).map((newarrival) => {
-            return (
-              <div key={newarrival._id}>
-                <Center py={20}>
-                  <Box>
-                    <Box className='arrival-product-hover'>
-                      <Image
-                        height={400}
-                        width={250}
-                        objectFit={'cover'}
-                        src={newarrival.imgOne}
-                        onClick={newArrivalHandle}
-                      />
-                    </Box>
-                  </Box>
-                </Center>
-              </div>
-            )
-          })
-        }
+        <Center py={20}>
+          <Box>
+            <Box className='arrival-product-hover'>
+              <Image
+                height={400}
+                width={250}
+                objectFit={'cover'}
+                src='https://eva.temashdesign.me/fashion/wp-content/uploads/sites/2/2016/12/7183324-1-khaki.jpeg'
+                onClick={womenDressCategory}
+              />
+            </Box>
+          </Box>
+        </Center>
+        <Center py={20}>
+          <Box>
+            <Box className='arrival-product-hover'>
+              <Image
+                height={400}
+                width={250}
+                objectFit={'cover'}
+                src='https://eva.temashdesign.me/fashion/wp-content/uploads/sites/2/2016/11/6833618-1-green.jpeg'
+                onClick={menJacketCategory}
+              />
+            </Box>
+          </Box>
+        </Center>
+        <Center py={20}>
+          <Box>
+            <Box className='arrival-product-hover'>
+              <Image
+                height={400}
+                width={250}
+                objectFit={'cover'}
+                src='https://eva.temashdesign.me/fashion/wp-content/uploads/sites/2/2016/10/7038094-1-black100.jpg'
+                onClick={menShirtCategory}
+              />
+            </Box>
+          </Box>
+        </Center>
+        <Center py={20}>
+          <Box>
+            <Box className='arrival-product-hover'>
+              <Image
+                height={400}
+                width={250}
+                objectFit={'cover'}
+                src='https://eva.temashdesign.me/fashion/wp-content/uploads/sites/2/2017/02/5319455539121_006_d.jpg'
+                onClick={shoesCategory}
+              />
+            </Box>
+          </Box>
+        </Center>
       </div>
     </div>
   )

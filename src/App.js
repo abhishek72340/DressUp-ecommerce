@@ -1,19 +1,19 @@
 import React from 'react';
 import { Navbar } from './Components/navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
-import { Main } from './Components/main/Main';
-import { Shop } from './Components/shop/Shop';
+import { Main } from './pages/main/Main';
+import { Shop } from './pages/shop/Shop';
 import { CustomerHelp } from './pages/customerHelp/CustomerHelp';
 import { Footer } from './Components/footer/Footer';
 import { ContactUs } from './pages/contactUs/ContactUs';
 import Mockman from 'mockman-js'
 import { CartItem } from './Components/cartItem/CartItem';
-import { Wishlist } from './Components/wishlist/Wishlist';
-import { Login } from './Components/signup/Login';
-import { Signup } from './Components/signup/Signup';
-import { ForgotPassword } from './Components/signup/ForgotPassword';
+import { Wishlist } from './pages/wishlist/Wishlist';
+import { Login } from './pages/signup/Login';
+import { Signup } from './pages/signup/Signup';
+import { ForgotPassword } from './pages/signup/ForgotPassword';
 import { Cart } from './Components/cartItem/Cart';
-import { SingleProduct } from './Components/singleProduct/SingleProduct';
+import { SingleProduct } from './pages/singleProduct/SingleProduct';
 import { ErrorPage } from './pages/errorPage/ErrorPage';
 import { ToastContainer } from 'react-toastify';
 import { Address } from './pages/address/Address';

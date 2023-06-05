@@ -3,7 +3,7 @@ import './CartItem.css';
 import { useCart } from '../../context/cart-context';
 import { ProductCounter } from './productCounter/ProductCounter';
 import { AiFillDelete } from 'react-icons/ai';
-import { CheckOut } from '../../pages/checkout/CheckOut';
+import { CheckOut } from '../../Components/checkout/CheckOut';
 export const CartItem = () => {
   const { cartItems,removeCartItem } = useCart();
  

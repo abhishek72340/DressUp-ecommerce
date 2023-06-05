@@ -18,15 +18,18 @@ export const Address = () => {
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;
     document.body.appendChild(script);
-
+    if (!cartItems.length) {
+      navigate(-1)
+    }
     return () => {
       document.body.removeChild(script);
     };
-  }, []);
+  }, [navigate,cartItems.length]);
 
   // Handle Payment Succes//
   const handlePaymentSuccess = (payment) => {
-    cartItems.map((product) => setMyOrders((prev) => [...prev, { id: product._id, title: product.title, quantity: product.qty, price: product.price * product.qty, address: selectedAddress, txNum: payment.razorpay_payment_id, dateOfPurchase: new Date().toDateString() }]))
+    cartItems.map((product) => setMyOrders((prev) => [...prev, { id: product._id, title: product.title, quantity: product.qty, price: product.price * product.qty, mobile: selectedAddress.mobile, address: `${selectedAddress.street}, ${selectedAddress.city}, ${selectedAddress.state}, ${selectedAddress.country}, ${selectedAddress.pinCode}`, txNum: payment.razorpay_payment_id, dateOfPurchase: new Date().toDateString() }]))
+
     navigate('/successpayment');
     window.scrollTo({ top: 0, scroll: 'instant' })
     setCartItems([])
@@ -91,11 +94,13 @@ export const Address = () => {
                   <input type="radio" name="" id="" checked='true' />
                 </div>
                 <div id='address-input-data'>
-                  <p>Name : {address?.name}</p>
+                <p>Name : {address?.name}</p>
                   <p>Mobile : {address?.mobile}</p>
-                  <p>Pin Code : {address?.pinCode}</p>
+                  <p>Street No. : {address?.street}</p>
                   <p>City : {address?.city}</p>
-                  <p>Address : {address?.address}</p>
+                  <p>State : {address?.state}</p>
+                  <p>Country : {address?.country}</p>
+                  <p>Pin Code : {address?.pinCode}</p>
                 </div>
                 <div className="updated-address-button">
                   <span> <button className='edit-address-button' onClick={() => { navigate('/addressmodal') }} >Edit</button></span>

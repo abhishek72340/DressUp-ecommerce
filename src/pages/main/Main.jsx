@@ -1,11 +1,11 @@
 import React from 'react'
 import './Main.css';
-import {Wallpaper} from '../wallpaper/Wallpaper';
-import { NewArrival } from '../newArrival/NewArrival';
-import { MensJacket } from '../mensJacket/MensJacket';
-import { ShoesCollection } from '../shoesCollection/ShoesCollection';
-import { WomenDress } from '../womenDress/WomenDress';
-import { BestSelling } from '../bestSelling/BestSelling';
+import {Wallpaper} from '../../Components/wallpaper/Wallpaper';
+import { NewArrival } from '../../Components/newArrival/NewArrival';
+import { MensJacket } from '../../Components/mensJacket/MensJacket';
+import { ShoesCollection } from '../../Components/shoesCollection/ShoesCollection';
+import { WomenDress } from '../../Components/womenDress/WomenDress';
+import { BestSelling } from '../../Components/bestSelling/BestSelling';
 import { useProduct } from '../../context/product-context';
 import { Spinner } from '@chakra-ui/react';
 import { Module } from '../../module/Module';

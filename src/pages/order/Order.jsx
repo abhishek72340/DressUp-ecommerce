@@ -20,8 +20,6 @@ export const Order = () => {
                   <span className='order-value'> <span className='order-key'>Date:</span> {data.dateOfPurchase}</span>
                   <span className='order-value'><span className='order-key'>Name:</span> {data.title}</span>
                   <span className='order-value'><span className='order-key'>Mobile:</span> {data.mobile}</span>
-                  <span className='order-value'><span className='order-key'>Pincode:</span> {data.pincode}</span>
-                  <span className='order-value'><span className='order-key'>City:</span> {data.city}</span>
                   <span className='order-value'><span className='order-key'>Address:</span> {data.address}</span>
                   <span className='order-value'><span className='order-key'>Quantity:</span> {data.quantity}</span>
                   <span className='order-value'><span className='order-key'>price:</span> {data.price}</span>

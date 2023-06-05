@@ -1,7 +1,7 @@
 import './WishlistItem.css';
 import { useWishlist } from '../../context/wishlist-cart';
 import { Module } from '../../module/Module';
-import WishlistCard from '../card/WishlistCard';
+import WishlistCard from '../../Components/card/WishlistCard';
 export const WishlistItem = () => {
   const { wishlistItem } = useWishlist();
    return (

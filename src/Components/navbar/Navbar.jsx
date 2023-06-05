@@ -2,12 +2,12 @@ import React from 'react'
 import './Navbar.css';
 import { useCart } from '../../context/cart-context';
 import { useWishlist } from '../../context/wishlist-cart';
-import { Account } from '../../Components/signup/Account'
+import { Account } from '../../pages/signup/Account'
 import { NavLink } from 'react-router-dom';
 import { HiOutlineShoppingBag } from 'react-icons/hi'
 import { AiOutlineHeart } from 'react-icons/ai';
-import { SearchBar } from '../../pages/searchBar/SearchBar';
-import { SideBar } from '../../pages/sideBar/SideBar';
+import { SearchBar } from '../../Components/searchBar/SearchBar';
+import { SideBar } from '../../Components/sideBar/SideBar';
 import logo from '../../images/logo.webp';
 const Navbar = () => {
   const { cartItems } = useCart();

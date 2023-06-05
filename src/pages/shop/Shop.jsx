@@ -1,8 +1,8 @@
 import './Shop.css';
 import { useProduct } from '../../context/product-context';
 import { getSortedProducts } from '../../utils/FilterUtils';
-import { FilterCard } from '../card/FilterCard';
-import { ShopCard } from '../card/ShopCard';
+import { FilterCard } from '../../Components/card/FilterCard';
+import { ShopCard } from '../../Components/card/ShopCard';
 import shop from '../../images/shop.jpg';
 export const Shop = () => {
   const { products, sortBy, dispatch } = useProduct();

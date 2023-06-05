@@ -35,10 +35,10 @@ export const AddressModal = () => {
                     />
                     <input
                         type="text"
-                        name="pinCode"
-                        value={formData.pinCode}
+                        name="street"
+                        value={formData.street}
                         onChange={handleInputChange}
-                        placeholder="Pin Code"
+                        placeholder="Street No."
                         required
                         className='addressmodal-input-field'
                     />
@@ -53,10 +53,28 @@ export const AddressModal = () => {
                     />
                     <input
                         type="text"
-                        name="address"
-                        value={formData.address}
+                        name="state"
+                        value={formData.state}
                         onChange={handleInputChange}
-                        placeholder="Address"
+                        placeholder="State"
+                        required
+                        className='addressmodal-input-field'
+                    />
+                    <input
+                        type="text"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleInputChange}
+                        placeholder="Country"
+                        required
+                        className='addressmodal-input-field'
+                    />
+                    <input
+                        type="number"
+                        name="pinCode"
+                        value={formData.pinCode}
+                        onChange={handleInputChange}
+                        placeholder="Pin Code"
                         required
                         className='addressmodal-input-field'
                     />

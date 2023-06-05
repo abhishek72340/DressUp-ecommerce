@@ -69,7 +69,7 @@ export const SideBar = () => {
     navigate('/addressmodal')
     onClose(true)
   }
-  const ProfileHandler = () => {
+  const profileHandler = () => {
     navigate('/profile')
     onClose(true)
   }
@@ -89,8 +89,8 @@ export const SideBar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerHeader borderBottomWidth='1px'>Search Product</DrawerHeader>
-          <div className='sidebar-account-address' onClick={addressHandler}><span >Profile</span><span id='sidebar-address-icon'><ImProfile /></span></div>
-          <div className='sidebar-account-address' onClick={ProfileHandler}><span >Address</span><span id='sidebar-address-icon'><FaRegAddressCard /></span></div>
+          <div className='sidebar-account-address' onClick={profileHandler}><span >Profile</span><span id='sidebar-address-icon'><ImProfile /></span></div>
+          <div className='sidebar-account-address' onClick={addressHandler}><span >Address</span><span id='sidebar-address-icon'><FaRegAddressCard /></span></div>
           <div className='sidebar-account-address' onClick={orderHandler}><span >My Order</span><span id='sidebar-address-icon'><BsBagCheckFill /></span></div>
          
           <div id='side-signup'> {!token ? <p id='login'><span onClick={sidebarLoginRedirect} >Login</span>/<span onClick={sidebarSignupRedirect}>Signup</span> <FiLogIn id='login-icon' /> </p> : <span id='login' onClick={userLogOut} ><span style={{ marginTop: '4px' }}>Logout</span> <AiOutlineLogout id='login-icon' /></span>}</div>

@@ -6,14 +6,16 @@ const AddressProvider = ({ children }) => {
     const [add, setAdd] = useState(false)
     const [addresses, setAddresses] = useState([]);
     const [editIndex, setEditIndex] = useState(-1);
-    const [myOrders, setMyOrders] = useState([{ id: 'sbhdbshsia', title: 'clothsokdoeodkeodde', quantity: '3', price: '4532', address: 'mankapur,gonda,niwdindw', txNum: 'razorpay', dateOfPurchase: new Date().toDateString() }])
+    const [myOrders, setMyOrders] = useState([])
     const [formData, setFormData] = useState({
         name: '',
         mobile: '',
         pinCode: '',
         city: '',
-        address: '',
-        isAddressSelected: false
+        street: '',
+        state: '',
+        country: '',
+        isAddressSelected: true
     });
     const navigate = useNavigate();
     const editAddress = (index) => {
@@ -36,8 +38,10 @@ const AddressProvider = ({ children }) => {
             mobile: '',
             pinCode: '',
             city: '',
-            address: '',
-            isAddressSelected: false
+            street: '',
+            state: '',
+            country: '',
+            isAddressSelected: true
         });
         navigate('/address');
     };
@@ -56,8 +60,10 @@ const AddressProvider = ({ children }) => {
             mobile: '',
             pinCode: '',
             city: '',
-            address: '',
-            isAddressSelected: false
+            street: '',
+            state: '',
+            country: '',
+            isAddressSelected: true
         });
         setEditIndex(-1);
         navigate('/address')
