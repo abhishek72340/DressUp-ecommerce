@@ -24,6 +24,13 @@ Of course, no shop will serve all products since your needs may be different. So
 - Address management
 - Single Product Page
 - Responisve
+
+## Tech Stack
+
+**Client:** React (ChakraUI, React icons)
+
+**Server:** Node, Express
+
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -62,12 +69,6 @@ If you have any feedback, please reach out to us at abhisingh.72340@gmail.com
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-singh-rana-6354a9180/)
-
-
-
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
 
 
 ## Tech Stack
