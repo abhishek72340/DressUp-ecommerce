@@ -46,7 +46,7 @@ export const NewArrival = () => {
         <p className='women-dress'>WOMEN'S DRESS</p>
         <p className='men-jacket'>MEN'S JACKET</p>
         <p className='men-shirt'>MEN'S  SHIRT</p>
-        <p className='clothing' >CLOTHING</p>
+        <p className='clothing' >SHOES</p>
       </div>
       <div id='new-arrival-product'>
         <Center py={20}>

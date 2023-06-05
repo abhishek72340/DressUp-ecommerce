@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+#new-arrival-products-name{
+    font-family: 'Hammersmith One', sans-serif;
+
+}
 #new-arrival-product {
     display: flex;
     flex-wrap: wrap;
