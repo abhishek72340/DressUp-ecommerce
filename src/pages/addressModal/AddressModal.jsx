@@ -93,7 +93,10 @@ export const AddressModal = () => {
                                 <p>Mobile : {address.mobile}</p>
                                 <p>Pin Code : {address.pinCode}</p>
                                 <p>City : {address.city}</p>
-                                <p>Address : {address.address}</p>
+                                <p>street : {address.street}</p>
+                                <p>state : {address.state}</p>
+                                <p>country : {address.country}</p>
+                               
                             </div>
                             <div id='address-modal-button'>
                                 <button className='address-modal-edit-button' onClick={() => editAddress(index)}>Edit</button>
