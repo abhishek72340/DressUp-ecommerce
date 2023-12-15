@@ -49,7 +49,7 @@ export const Address = () => {
 
     //Razor-Pay Integrate//
     const options = {
-      key: "rzp_test_XAo7wMYEo0HyyC",
+      key: "rzp_test_8GDRROQOiQGl5k",
       amount: totalAmount * 82 * 100 + 410,
       currency: "INR",
       name: "DressUp",
