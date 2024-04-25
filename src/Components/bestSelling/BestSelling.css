@@ -107,7 +107,7 @@
     display: flex;
     justify-content: space-around;
     width: 30%;
-    margin-left: 27rem;
+     gap:3rem;
 }
 
 /* Design for Mobile */
